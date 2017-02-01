@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [First Chapter](chapter1.md)
+* [What is Open Tibia?](chapter1.md)
+* [Setting up your first server](setting-up-a-server.md)
 * [Talkactions](talkactions.md)
 
