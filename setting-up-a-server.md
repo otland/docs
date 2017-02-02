@@ -8,7 +8,7 @@ When editing code, programmers tend to use certain text editors that have colors
 
 ##### Database
 
-For storing information on your server, you will need a database, which will contain your account, players, among other things. You will need [Uniform Server Zero](http://www.uniformserver.com) to use MySQL and phpMyAdmin.
+For storing information on your server, you will need a database, which will contain your account, players, among other things. You will need [Uniform Server Zero](http://www.uniformserver.com) to use phpMyAdmin.
 
 After downloading Uniform Server, open "unicontroller.exe" and click the two buttons at the top right \(Start Apache, Start MySQL\). You will see two windows pop up in your default browser, close them. Click back on the unicontroller and click the button that says "phpMyAdmin". There will be another window now that should pop up in your default browser, keep this open.
 
@@ -18,14 +18,18 @@ The screen you're looking at will be a bit confusing due to all of the buttons, 
 2. Select your database name and click "Create"
 3. You should have that database created now, and should have automatically opened it for you
 4. At the top, click the button that says "Import"
-5. Click "Choose File" next to "Browse your computer" and locate the "schema.sql" file you extracted
+5. Click "Choose File" next to "Browse your computer" and locate the "schema.sql" file you extracted and select it
 6. Scroll down and click "Go"
 
-Now we have a database that our server will be able to store information in.
+Now we have a database that our server will be able to store information in, keep this window up, we will need it again soon.
 
 ##### Server files
 
 You will need a set of files to start off with so you can run your server, you can download the files [here](https://github.com/otland/forgottenserver/releases/tag/v1.2), after downloading, extract the zip. There is also another set of files required to run the server engine, which you can find [here](https://otland.net/threads/opentibia-dll-pack-v2-0.155310/), download whatever bit your machine is and extract it to the same folder you have everything in.
+
+The folder should look like this now:
+
+![](http://i.imgur.com/eLy8osj.png)
 
 Open config.lua and follow these steps:
 
