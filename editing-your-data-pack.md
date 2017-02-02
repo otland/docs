@@ -1,12 +1,10 @@
 # Editing your data pack
 
-TODO: Text editor
+##### Scripting Basics
 
-TODO: Scripting basics
+##### TFS Scripting Interface
 
-TODO: Scripting interface
-
-TODO: TFS Style-code \(OOP\)
+##### Code styling
 
 
 
