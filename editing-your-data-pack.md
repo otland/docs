@@ -1,4 +1,4 @@
-# Editing your data pack
+# Editing your server
 
 ##### Scripting Basics
 
