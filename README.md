@@ -1,3 +1,4 @@
-# My Awesome Book
+# Guide to setting up and maintaining an Open Tibia server
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+This book will cover the basics of setting up your first Open Tibia server, introduce you to the server interface, scripting, and more.
+
