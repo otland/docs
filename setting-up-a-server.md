@@ -8,7 +8,7 @@ When editing code, programmers tend to use certain text editors that have colors
 
 ##### Database
 
-For storing information on your server, you will need a database, which will contain your account, players, among other things. You will need [Uniform Server Zero](http://www.uniformserver.com) to use phpMyAdmin.
+Open Tibia servers store information such as accounts, players, house items and many more things in a database. A database is a separate service and not part of the Open Tibia server itself, but is being used by it. This means you need to install a database service to run alongside the Open Tibia server. In this tutorial we will be using [Uniform Server Zero](http://www.uniformserver.com), a web server which includes a database service \(MySQL\) and also a web based database management tool called phpMyAdmin, where you will be able to view and modify data such as player names, levels or other stored information.
 
 After downloading Uniform Server, open "unicontroller.exe" and click the two buttons at the top right \(Start Apache, Start MySQL\). You will see two windows pop up in your default browser, close them. Click back on the unicontroller and click the button that says "phpMyAdmin". There will be another window now that should pop up in your default browser, keep this open.
 
