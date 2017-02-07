@@ -43,5 +43,18 @@ Now, open theforgottenserver.exe, your server should start up now!
 
 ##### Website
 
+To create an account on your new server, we will need to set up a website. We will be using Znote AAC for this tutorial, which you can get [here](https://github.com/znote/znoteaac).
 
+1. Extract the .zip file to your web directory \(Example: C:\UniServ\www\ \) Without modifying config.php, enter the website and wait for mysql connection error. This will show you the rest of the instructions as well as the mysql schema.
+
+   2. Edit config.php and:
+
+* modify $config\['TFSVersion'\] with correct TFS version you are running. \(TFS\_02, TFS\_03, TFS\_10\).
+* modify $config\['page\_admin\_access'\] with your admin account username\(s\).
+
+   3. Before inserting correct SQL connection details, visit the website \([http://127.0.0.1/](http://127.0.0.1/)\), it will generate a mysql schema you should import to your OT servers database.
+
+   4. Follow the steps on the website and import the SQL schema for Znote AAC, and edit config.php with correct mysql details.
+
+You should now be able to connect to your website by typing to 127.0.0.1 or localhost in your address bar.
 
