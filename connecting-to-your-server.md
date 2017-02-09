@@ -1,12 +1,16 @@
 # Connecting to your server
 
-
-
-##### Connecting
+#### Connecting
 
 To connect to your server, you will need [OTLand IP Changer](https://otland.net/threads/otland-ip-changer.134369/), which lets you set the IP to connect to in the Tibia client and launch it, after which you can use your account/password to log in.
 
-##### OTClient
+First thing you want to do after installing it, is go to Settings, click "Add new Tibia client", set the version to whatever you're going to add, and go to the directory that you have your Tibia exe in, select the exe and save that.
+
+Close out of settings and enter 127.0.0.1 in the IP, select the client version, and click launch.
+
+You should now be able to log in using your account/password if you have already created one using the website we set up.
+
+#### OTClient
 
 
 
