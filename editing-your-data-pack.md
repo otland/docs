@@ -69,7 +69,7 @@ function onRemoveItem(moveitem, tileitem, pos)
 
 ###### Npc:
 
-```
+```lua
 function onCreatureAppear(cid)
 function onCreatureDisappear(cid)
 function onCreatureSay(cid, type, msg)
