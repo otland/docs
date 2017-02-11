@@ -49,9 +49,9 @@ To create an account on your new server, we will need to set up a website. We wi
 
    1. Edit config.php and:
 
-2. modify $config\['TFSVersion'\] with correct TFS version you are running. \(TFS\_02, TFS\_03, TFS\_10\).
+2. modify `$config['TFSVersion']` with correct TFS version you are running. \(TFS\_02, TFS\_03, TFS\_10\).
 
-3. modify $config\['page\_admin\_access'\] with your admin account username\(s\).
+3. modify `$config['page_admin_access']` with your admin account username\(s\).
 
    1. Before inserting correct SQL connection details, visit the website \([http://127.0.0.1/](http://127.0.0.1/)\), it will generate a mysql schema you should import to your OT servers database.
 
