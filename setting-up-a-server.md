@@ -4,7 +4,7 @@ When setting up your first server, things may seem quite tedious to look at, but
 
 #### Installing a text editor
 
-When editing code, programmers tend to use certain text editors that have colors, features, and design that they like. The most popular text editors are [Sublime Text](https://www.sublimetext.com/3) and [Notepad++](https://notepad-plus-plus.org/download). Install whichever one appeals to you more, we will be using a text editor later on.
+When editing code, programmers tend to use certain text editors that have colors, features, and design that they like. The most popular text editors are [Notepad++](https://notepad-plus-plus.org/download) \(free\) and [Sublime Text](https://www.sublimetext.com/3)\(free trial\). Install whichever one appeals to you more, we will be using a text editor later on.
 
 #### Database
 
@@ -33,8 +33,8 @@ The folder should look like this now:
 
 Open config.lua and follow these steps:
 
-1. Locate mysqlUser and change the value to "root" if it isn't already
-2. Locate mysqlPass and change the value to "" if it isn't already
+1. Locate mysqlUser and change the value to "root", if it isn't already
+2. Locate mysqlPass and change the value to "" or the password you selected, if it isn't already
 3. Locate mysqlDatabase and change the value to what database name you chose in the previous section
 
 Once done, save and close the file.
@@ -45,7 +45,7 @@ Now, open theforgottenserver.exe, your server should start up now!
 
 To create an account on your new server, we will need to set up a website. We will be using Znote AAC for this tutorial, which you can get [here](https://github.com/znote/znoteaac).
 
-1. Extract the .zip file to your web directory \(Example: C:\UniServ\www\ \) Without modifying config.php, enter the website and wait for mysql connection error. This will show you the rest of the instructions as well as the mysql schema.
+1. Extract the .zip file to your web directory \(Example: C:\UniServ\www \) Without modifying config.php, enter the website and wait for mysql connection error. This will show you the rest of the instructions as well as the mysql schema.
 
    1. Edit config.php and:
 
@@ -53,9 +53,20 @@ To create an account on your new server, we will need to set up a website. We wi
 
 3. modify `$config['page_admin_access']` with your admin account username\(s\).
 
-   1. Before inserting correct SQL connection details, visit the website \([http://127.0.0.1/](http://127.0.0.1/)\), it will generate a mysql schema you should import to your OT servers database.
+   1. Before inserting correct SQL connection details, visit the website \([http://127.0.0.1/](http://127.0.0.1/\)\), it will generate a mysql schema you should import to your OT servers database.
 
    2. Follow the steps on the website and import the SQL schema for Znote AAC, and edit config.php with correct mysql details.
 
 You should now be able to connect to your website by typing to 127.0.0.1 or localhost in your address bar.
+
+
+
+#### Website alternative \(Gesior 2012\)
+
+1. Download Gesior 2012 from github: [https://github.com/gesior/Gesior2012/archive/TFS-1.0.zip](https://github.com/gesior/Gesior2012/archive/TFS-1.0.zip)
+2. Extract the .zip file to your web directory \(Example: C:\UniServ\www \) Without modifying config.php, enter the website and follow the installation, during the installation Gesior will install the database schema needed.
+
+You should now be able to connect to your website by typing to 127.0.0.1 or localhost in your address bar.
+
+
 
