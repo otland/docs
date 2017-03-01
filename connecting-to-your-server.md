@@ -12,5 +12,16 @@ You should now be able to log in using your account/password if you have already
 
 #### OTClient
 
+If you wish, you can use the OTClient to connec to your server, this way you don't need an external IP changer. If you are running Windows you can find the latest compile version for windows here: [https://otland.net/threads/otclient-builds-windows.217977/](https://otland.net/threads/otclient-builds-windows.217977/) Please note that it might not be the latest version, if you wish to use the latest version you will have to compile your own, you can follow these guides:
 
+Android: [https://github.com/edubart/otclient/wiki/Compiling-for-Android](https://github.com/edubart/otclient/wiki/Compiling-for-Android)
+
+Linux: [https://github.com/edubart/otclient/wiki/Compiling-on-Linux](https://github.com/edubart/otclient/wiki/Compiling-on-Linux)
+
+Mac OS X: [https://github.com/edubart/otclient/wiki/Compiling-on-Mac-OS-X](https://github.com/edubart/otclient/wiki/Compiling-on-Mac-OS-X)
+
+Windows: [https://github.com/edubart/otclient/wiki/Compiling-on-Windows](https://github.com/edubart/otclient/wiki/Compiling-on-Windows) 
+
+  
+The source code can be found here: [https://github.com/edubart/otclient/archive/master.zip](https://github.com/edubart/otclient/archive/master.zip)
 
