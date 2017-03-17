@@ -41,7 +41,7 @@ Once done, save and close the file.
 
 Now, open theforgottenserver.exe, your server should start up now!
 
-#### Website
+#### Website \(Znote AAC\)
 
 To create an account on your new server, we will need to set up a website. We will be using Znote AAC for this tutorial, which you can get [here](https://github.com/znote/znoteaac).
 
@@ -53,20 +53,16 @@ To create an account on your new server, we will need to set up a website. We wi
 
 3. modify `$config['page_admin_access']` with your admin account username\(s\).
 
-   1. Before inserting correct SQL connection details, visit the website \([http://127.0.0.1/](http://127.0.0.1/\)\), it will generate a mysql schema you should import to your OT servers database.
+   1. Before inserting correct SQL connection details, visit the website \([http://127.0.0.1/](http://127.0.0.1/%29\), it will generate a mysql schema you should import to your OT servers database.
 
    2. Follow the steps on the website and import the SQL schema for Znote AAC, and edit config.php with correct mysql details.
 
 You should now be able to connect to your website by typing to 127.0.0.1 or localhost in your address bar.
 
-
-
-#### Website alternative \(Gesior 2012\)
+#### Website alternative \(Gesior AAC\)
 
 1. Download Gesior 2012 from github: [https://github.com/gesior/Gesior2012/archive/TFS-1.0.zip](https://github.com/gesior/Gesior2012/archive/TFS-1.0.zip)
 2. Extract the .zip file to your web directory \(Example: C:\UniServ\www \) Without modifying config.php, enter the website and follow the installation, during the installation Gesior will install the database schema needed.
 
-You should now be able to connect to your website by typing to 127.0.0.1 or localhost in your address bar.
-
-
+You should now be able to connect to your website by typing \(127.0.0.1, localhost or the IP\) in your address bar on your browser.
 
