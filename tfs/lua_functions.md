@@ -1,8 +1,8 @@
 ### Game
 
 #### Available methods:
-* [createItem(itemId, count[, position])](#Game.createItem)
-* [createContainer(itemId, size[, position])](#Game.createContainer)  
+* [createItem(itemId, count[, position])](#Game-createItem)
+* [createContainer(itemId, size[, position])](#Game-createContainer)  
 * [createMonster(monsterName, position[, extended = false[, force = false]])](#Game.createMonster{monsterName, position[, extended = false[, force = false]]})  
 * [createNpc(npcName, position[, extended = false[, force = false]])](#Game.createNpc{npcName, position[, extended = false[, force = false]]})  
 * [createTile(x, y, z[, isDynamic = false])](#Game.createTile{x, y, z[, isDynamic = false]})  
@@ -26,7 +26,7 @@
 
 ***
 
-<a name="Game.createItem"/>
+<a name="Game-createItem"/>
 ###### Game.createItem(itemId, count[, position])
 > **Description:** Creates an item.  
 > **Parameters:** <ul><li>_itemId_ - _Id of the item to be created_</li><li>_count_ - _How many are we creating?_</li><li>_position_ - _Where do we place it? (optional)_</li></ul>
@@ -44,7 +44,7 @@ player:addItemEx(Game.createItem(2400, 1))
 
 ***
 
-<a name="Game.createContainer"/>
+<a name="Game-createContainer"/>
 ###### Game.createContainer(itemId, size[, position])
 > **Description:** Creates a container with given size.  
 > **Parameters:** <ul><li>_itemId_ - _Id of the item to be created_</li><li>_size_ - _Size of the container_</li><li>_position_ - _Where do we place it? (optional)_</li></ul>
@@ -62,7 +62,7 @@ player:addItemEx(Game.createContainer(ITEM_AMULETOFLOSS, 5))
 
 ***
 
-<a name="Game.createMonster{monsterName, position[, extended = false[, force = false]]}"/>
+<a name="Game-createMonster"/>
 ###### Game.createMonster(monsterName, position[, extended = false[, force = false]])
 > **Description:** Creates a monster.  
 > **Parameters:** <ul><li>_monsterName_ - _Name of the monster to be created_</li><li>_position_ - _Where do we place it?_</li><li>_extended_ - _Extend the range? (optional, default: false)_</li><li>_force_ - _Will it be created even if it cannot stand at the position? (optional, default: false)_</li></ul>
