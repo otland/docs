@@ -1,31 +1,32 @@
 ### Game
+
 #### Available methods:
-[createItem(itemId, count[, position])](#Game.createItem{itemId, count[, position]})  
-[createContainer(itemId, size[, position])](#Game.createContainer{itemId, size[, position]})  
-[createMonster(monsterName, position[, extended = false[, force = false]])](#Game.createMonster{monsterName, position[, extended = false[, force = false]]})  
-[createNpc(npcName, position[, extended = false[, force = false]])](#Game.createNpc{npcName, position[, extended = false[, force = false]]})  
-[createTile(x, y, z[, isDynamic = false])](#Game.createTile{x, y, z[, isDynamic = false]})  
-[createTile(position[, isDynamic = false])](#Game.createTile{position[, isDynamic = false]})  
-[getExperienceStage(level)](#Game.getExperienceStage{level})  
-[getGameState()](#Game.getGameState{})  
-[getHouses()](#Game.getHouses{})  
-[getMonsterCount()](#Game.getMonsterCount{})  
-[getNpcCount()](#Game.getNpcCount{})  
-[getPlayerCount()](#Game.getPlayerCount{})  
-[getPlayers()](#Game.getPlayers{})  
-[getReturnMessage(value)](#Game.getReturnMessage{value})  
-[getSpectators(position[, multifloor = false[, onlyPlayer = false[, minRangeX = 0[, maxRangeX = 0[, minRangeY = 0[, maxRangeY = 0]]]]]])](#Game.getSpectators{position[, multifloor = false[, onlyPlayer = false[, minRangeX = 0[, maxRangeX = 0[, minRangeY = 0[, maxRangeY = 0]]]]]]})  
-[getTowns()](#Game.getTowns{})  
-[getWorldType()](#Game.getWorldType{})  
-[loadMap(path)](#Game.loadMap{path})  
-[setGameState(state)](#Game.setGameState{state})  
-[setWorldType(type)](#Game.setWorldType{type})  
-[startRaid(raidName)](#Game.startRaid{raidName})  
+* [createItem(itemId, count[, position])](#Game.createItem)
+* [createContainer(itemId, size[, position])](#Game.createContainer)  
+* [createMonster(monsterName, position[, extended = false[, force = false]])](#Game.createMonster{monsterName, position[, extended = false[, force = false]]})  
+* [createNpc(npcName, position[, extended = false[, force = false]])](#Game.createNpc{npcName, position[, extended = false[, force = false]]})  
+* [createTile(x, y, z[, isDynamic = false])](#Game.createTile{x, y, z[, isDynamic = false]})  
+* [createTile(position[, isDynamic = false])](#Game.createTile{position[, isDynamic = false]})  
+* [getExperienceStage(level)](#Game.getExperienceStage{level})  
+* [getGameState()](#Game.getGameState{})  
+* [getHouses()](#Game.getHouses{})  
+* [getMonsterCount()](#Game.getMonsterCount{})  
+* [getNpcCount()](#Game.getNpcCount{})  
+* [getPlayerCount()](#Game.getPlayerCount{})  
+* [getPlayers()](#Game.getPlayers{})  
+* [getReturnMessage(value)](#Game.getReturnMessage{value})  
+* [getSpectators(position[, multifloor = false[, onlyPlayer = false[, minRangeX = 0[, maxRangeX = 0[, minRangeY = 0[, maxRangeY = 0]]]]]])](#Game.getSpectators{position[, multifloor = false[, onlyPlayer = false[, minRangeX = 0[, maxRangeX = 0[, minRangeY = 0[, maxRangeY = 0]]]]]]})  
+* [getTowns()](#Game.getTowns{})  
+* [getWorldType()](#Game.getWorldType{})  
+* [loadMap(path)](#Game.loadMap{path})  
+* [setGameState(state)](#Game.setGameState{state})  
+* [setWorldType(type)](#Game.setWorldType{type})  
+* [startRaid(raidName)](#Game.startRaid{raidName})  
 
 
 ***
 
-<a name="Game.createItem{itemId, count[, position]}"/>
+<a name="Game.createItem"/>
 ###### Game.createItem(itemId, count[, position])
 > **Description:** Creates an item.  
 > **Parameters:** <ul><li>_itemId_ - _Id of the item to be created_</li><li>_count_ - _How many are we creating?_</li><li>_position_ - _Where do we place it? (optional)_</li></ul>
@@ -43,7 +44,7 @@ player:addItemEx(Game.createItem(2400, 1))
 
 ***
 
-<a name="Game.createContainer{itemId, size[, position]}"/>
+<a name="Game.createContainer"/>
 ###### Game.createContainer(itemId, size[, position])
 > **Description:** Creates a container with given size.  
 > **Parameters:** <ul><li>_itemId_ - _Id of the item to be created_</li><li>_size_ - _Size of the container_</li><li>_position_ - _Where do we place it? (optional)_</li></ul>
@@ -374,7 +375,7 @@ addEvent(print, 1000, "Hello World!")
 > **Parameters:** <ul><li>_eventid_ - _The event id to stop._</li></ul>
 > **Returns:** true if an event was stopped, false otherwise.  
 > **Example:** 
-```Lua
+```lua
 -- Creates an event that should print "Hello World!" but it's stopped before that can happen.
 local event = addEvent(print, 1000, "Hello World!")
 stopEvent(event)
@@ -394,13 +395,13 @@ stopEvent(event)
 > **Parameters:** None  
 > **Returns:** The Unix time (epoch) in milliseconds  
 > **Example:** 
-```Lua
+```lua
 print(os.mtime() .. " milliseconds have passed since the Unix epoch")
 ```
 > **Added in version:** 1.0
 
-###table
-####Available methods:
+### table
+#### Available methods:
 [create(arrayLength, keyLength)](#table.create{arrayLength, keyLength})  
 
 
@@ -412,7 +413,7 @@ print(os.mtime() .. " milliseconds have passed since the Unix epoch")
 > **Parameters:** <ul><li>_arrayLength_ - _Ordered indexes (1, 2, ...arrayLength)_</li><li>_keyLength_ - _Unordered indexes (anything that does not follow the above)_</li></ul>
 > **Returns:** The created table.  
 > **Example:** 
-```Lua
+```lua
 local t = table.create(5, 0)
 for i = 1, #t do
 	t[i] = i + 1
