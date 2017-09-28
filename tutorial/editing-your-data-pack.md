@@ -1,10 +1,10 @@
 # Editing your server
 
-#### What languages are used
+## What languages are used
 
 There are only two languages used when working with TFS are XML and Lua. XML being the markup language that lets you register Lua scripts and can store information, while Lua is for scripting and interacting with the game world. You can start learning Lua from [here](https://www.lua.org/pil/contents.html).
 
-#### TFS Scripting Interface
+## TFS Scripting Interface
 
 There are a few main functions that are needed when creating scripts.
 
@@ -89,8 +89,6 @@ function onSay(player, words, param)
 ```lua
 function onUseWeapon(player, variant)
 ```
-
-#### Code styling
 
 #### 
 
