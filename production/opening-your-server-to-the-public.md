@@ -4,15 +4,9 @@ Whether you're looking to just open your server to let your friends play, or you
 
 Your two choices of making your server public are either buying a host and setting your server up on the virtual machine, or port forwarding. The best option to choose depends on what you're looking for, if you want a serious project you should buy a host, since hosts can protect your server from DDoS, and the host may be able to provide help in setting up your server. However, if you are looking to open it for a few friends, your best choice is port forwarding \(unless you would like to pay for a host\).
 
+## Choosing a host:
 
-
-##### Choosing a host:
-
-
-
-
-
-##### Port forwarding:
+## Port forwarding:
 
 OT servers use port 7171 and 7172, which players use to connect to your server as long as they're open. Port 7171 is for logging in, and 7172 is the game port. Another port that we will be using is port 80, which allows access to websites, which we will be setting up soon.
 
