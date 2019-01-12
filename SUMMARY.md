@@ -8,4 +8,5 @@
   * [Opening your server to the public](running-your-first-ot-server/opening-your-server-to-the-public.md)
 * [TFS documentation](tfs-documentation/README.md)
   * [Lua functions](tfs-documentation/lua_functions.md)
+* [Glossary](glossary.md)
 
