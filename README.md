@@ -1,8 +1,10 @@
-# Guide to setting up and maintaining an Open Tibia server
+# Introduction
+
+## Guide to setting up and maintaining an Open Tibia server
 
 This book will cover the basics of setting up your first Open Tibia server, introduce you to the server interface, scripting, and more.
 
-# What is Open Tibia?
+## What is Open Tibia?
 
 Open Tibia \(abbreviated as OT\) is an open-source role-playing game with which people may create their own servers for the public to play. They may have unique content with their own maps and features, and different skill/level rates than the original Tibia.
 
