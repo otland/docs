@@ -1,16 +1,16 @@
-# Editing your data pack
+# Editing your datapack
 
-### What languages are used
+### What are the languages used
 
-There are only two languages used when working with TFS are XML and Lua. XML being the markup language that lets you register Lua scripts and can store information, while Lua is for scripting and interacting with the game world. You can start learning Lua from [here](https://www.lua.org/pil/contents.html).
+There are two main languages used when working with TFS: XML and Lua. Depending on your knowledge, you may also want to edit the sources, which would mean you would have to work with C++ as well. XML is a markup language that lets you register Lua scripts and store information, while Lua is used for scripting and interacting with the game world. You can start learning Lua with [Programming in Lua](https://www.lua.org/pil/contents.html) or [Stigma's Lua guide](https://stigmax.gitbook.io/lua-guide/).
 
-### TFS Scripting Interface
+### TFS scripting interface
 
 There are a few main functions that are needed when creating scripts.
 
-The current scripting interfaces are: Actions, Chatchannels, Creaturescripts, Events, Globalevents, Movements, Npc, Spells, Talkactions, and Weapons.
+The current scripting interfaces are: Actions, Chatchannels, Creaturescripts, Events, Globalevents, Monsters, Movements, Npc, Spells, Talkactions and Weapons.
 
-For scripting purposes, you should use a reference or memorize the main functions used in these interfaces, these functions are:
+For scripting purposes, you should use some reference or memorize the main functions used in these interfaces:
 
 **Actions:**
 
@@ -45,11 +45,21 @@ function onExtendedOpcode(player, opcode, buffer)
 **Globalevents:**
 
 ```lua
-function onThink(interval, lastExecution)
+function onThink(interval)
 function onStartup()
 function onShutdown()
 function onRecord(current, old)
 function onTime()
+```
+
+**Monsters:**
+
+```lua
+function onThink(interval)
+function onCreatureMove(creature, newTile, newPos, oldTile, oldPos, teleport)
+function onCreatureDisappear(creature, isLogout)
+function onCreatureAppear(creature, isLogin)
+function onCreatureSay(creature, type, text)
 ```
 
 **Movements:**

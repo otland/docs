@@ -1,18 +1,18 @@
 # Connecting to your server
 
-**Connecting**
+**Connecting with Tibia native client**
 
-To connect to your server, you will need [OTLand IP Changer](https://otland.net/threads/otland-ip-changer.134369/), which lets you set the IP to connect to in the Tibia client and launch it, after which you can use your account/password to log in.
+In order to connect to your server, you will need [OtLand IP Changer](https://otland.net/threads/otland-ip-changer.134369/). This tool lets you change the IP address of your Tibia client, so that you can connect to the server when entering your account name and password to log in.
 
-First thing you want to do after installing it, is go to Settings, click "Add new Tibia client", set the version to whatever you're going to add, and go to the directory that you have your Tibia exe in, select the exe and save that.
+The first thing to do after downloading and opening it is to go to Settings, click on "Add new Tibia client", set the version and select the Tibia client executable file. Finally, click the "Add" button.
 
-Close out of settings and enter 127.0.0.1 in the IP, select the client version, and click launch.
+Close the settings windows and enter 127.0.0.1 in the IP field, select the client version and click "Apply".
 
-You should now be able to log in using your account/password if you have already created one using the website we set up.
+The client should start automatically and you should be able to log in using your account name and password, if you have already created one using the website we set up previously.
 
 **OTClient**
 
-If you wish, you can use the OTClient to connect to your server, this way you don't need an external IP changer. If you are running Windows you can find the latest compile version for Windows here: [https://otland.net/threads/otclient-builds-windows.217977/](https://otland.net/threads/otclient-builds-windows.217977/) Please note that it might not be the latest version, if you wish to use the latest version you will have to compile your own, you can follow these guides:
+If you wish, you can alternatively use OTClient to connect to your server, this way you won't need any IP changer. If you are running Windows, you can find the latest builds for Windows here: [https://otland.net/threads/otclient-builds-windows.217977/](https://otland.net/threads/otclient-builds-windows.217977/). Please note that it might not be the latest version, if you wish to use the latest version, you will have to compile your own. To do that, you can follow these guides:
 
 * Android: [https://github.com/edubart/otclient/wiki/Compiling-for-Android](https://github.com/edubart/otclient/wiki/Compiling-for-Android)
 * Linux: [https://github.com/edubart/otclient/wiki/Compiling-on-Linux](https://github.com/edubart/otclient/wiki/Compiling-on-Linux)
