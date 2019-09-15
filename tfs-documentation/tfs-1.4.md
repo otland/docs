@@ -31,7 +31,8 @@ Following these lines, you can find a changelog made of newly added features, is
 * Creature:
   * Creature:setHealth\(health\)
   * Creature:setSkillLoss\(skillLoss\)
-  * Creature:addSummon\(monster\) and Creature:removeSummon\(monster\)
+  * Creature:addSummon\(monster\)
+  * Creature:removeSummon\(monster\)
   * Added Creature:getZone\(\)
     * ZONE\_PROTECTION
     * ZONE\_NOPVP
@@ -50,8 +51,8 @@ Following these lines, you can find a changelog made of newly added features, is
   * MESSAGE\_PARTY
 * Events:
   * Player:onReportRuleViolation\(targetName, reportType, reportReason, comment, translation\)
-  * Player:onItemMoved\(item, count, fromPosition, toPosition\) or Player.onItemMoved\(self, item, count, fromPosition, toPosition, fromCylinder, toCylinder\)
-  * Party:onShareExperience\(exp\) or Party.onShareExperience\(self, exp\)
+  * Player:onItemMoved\(item, count, fromPosition, toPosition\)
+  * Party:onShareExperience\(exp\)
   * Monster:onDropLoot\(corpse\)
 * Game:
   * Game.getClientVersion\(\)
