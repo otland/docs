@@ -1,6 +1,6 @@
-# TFS 1.4 official release
+# \(Upcoming\) TFS 1.4 official release
 
-In this section, we will cover the new official release of The Forgotten Server, TFS 1.4 !
+In this section, we will cover the upcoming \(date not confirmed yet\) official release of The Forgotten Server, TFS 1.4 !
 
 One of the major features from this release is [Revscriptsys](https://github.com/otland/forgottenserver/wiki/Revscriptsys), which allows us to register scripts using Lua instead of XML. Another important feature is a custom RSA key loader, which will allow you to use the RSA private key from a PEM file you may generate, thereby granting more security to your server. Some of the other features are: a Docker image to easily set up TFS, storing town lists in database, POSIX signal handling...
 
