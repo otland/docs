@@ -20,7 +20,7 @@ If your router/modem gives you text boxes straight forward or gives you an "add"
 
 Once this is done, it's time to find your IPv4 address, open command prompt and type in **ipconfig**, it should give you a list of a bunch of different things, but for now we only need the IPv4 address, which should be in the format of 192.168.x.xxxx. Once you have your IPv4 address, go back to your router/modem and enter your IPv4 address as the "Private IP Address", this should be the final box you need to fill out. Do the same process but with port 7172 and port 80.
 
-Your ports should now be forwarded, to test if your ports are open, you can use this [port checker](http://halfaway.net/portchecker.php).
+Your ports should now be forwarded, to test if your ports are open, you can use this [port checker](https://www.canyouseeme.org/).
 
 We're not fully done yet, we still need to edit the hosts file.
 
