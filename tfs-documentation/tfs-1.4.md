@@ -54,6 +54,7 @@ Following these lines, you can find a changelog made of newly added features, is
   * Player:onItemMoved\(item, count, fromPosition, toPosition\)
   * Party:onShareExperience\(exp\)
   * Monster:onDropLoot\(corpse\)
+  * Creature:onHear\(speaker, words, type\)
 * Game:
   * Game.getClientVersion\(\)
 * Group:
