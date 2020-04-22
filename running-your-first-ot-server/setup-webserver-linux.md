@@ -42,7 +42,7 @@ sudo php -v
 ```
 The output will be looking something similar as this (I am using ubuntu 19.10 here which uses php version 7.3 as default. If you're running on a server you most likely run on 18.04 lts or with the newest version 20.04 lts):
 
-![alt text](https://worldofcoding.com/github/images/otland-gitbook/phpversion.png "phpversion")
+![alt text](https://worldofcoding.net/github-img/otland-gitbook/phpversion.png "phpversion")
 
 Second we want to do is enabling php in our nginx server and setting the configuration just as we want. So we will be going to edit our nginx config. Now we need to install a command line text editor called "vim". After that we installed it we will directly open the configuration file.
 ```bash
@@ -111,7 +111,7 @@ We need to create ourselves a mysql admin account. We will be doing this the fol
 ```bash
 sudo mariadb
 ```
-![alt text](https://worldofcoding.com/github/images/otland-gitbook/mariadb.png "mariadb")
+![alt text](https://worldofcoding.net/github-img/otland-gitbook/mariadb.png "mariadb")
 ###### You are inside the database right now!
 
 We will be creating the user 'otadmin' with the password of 'otadminpassword', change these values to what you want it to be!
