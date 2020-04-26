@@ -1,12 +1,7 @@
-# Setting up your ubuntu linux server
-guiding to setup your very own ubuntu linux server with a webserver plus the ability to deploy your tfs server
-
-> We are not responsible for the mistakes you make
-
 # Getting started
-Rent a ubuntu server 18.04 or higher from a trusted hosting company such as ovh.com or install for the sake of learning experience ubuntu server 18.04 or higher on another computer or if you are on windows use virtualbox to get your ubuntu server.
+Rent a Ubuntu Server 18.04 or higher from a trusted hosting company such or install for the sake of learning experience Ubuntu Server 18.04 or higher in VirtualBox.
 
-Once you're set we will start by accessing our server. If you're on windows you should get putty(click here), if you're on macOS or Linux you can use the terminal which is standard available. With putty just follow the screen ( insert your domain/ip-address and click ok ) for macOS and linux users type:
+Once you're set we will start by accessing our server. If you're on windows you should get putty(https://www.putty.org/), if you're on macOS or Linux you can use the terminal which is standard available. With putty just follow the screen ( insert your domain/ip-address and click ok ) for macOS and linux users type:
 
 ```bash
 ssh username@domain/ipaddress
@@ -17,7 +12,7 @@ domain/ipaddress example => yourdomain.com or 127.0.0.1`
 Now you will be prompted for your password (if in putty you will be prompted for the password as soon you click on Open) Insert your password and presh enter (you will not see what you type, so make sure you type your password in the right order). Now we are in our server :)
 
 ## Update and Upgrade the system
-The first thing we will do is updating our ubuntu server with the following command
+The first thing we will do is updating our Ubuntu Server with the following command
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
@@ -42,7 +37,7 @@ sudo php -v
 ```
 The output will be looking something similar as this (I am using ubuntu 19.10 here which uses php version 7.3 as default. If you're running on a server you most likely run on 18.04 lts or with the newest version 20.04 lts):
 
-![alt text](https://worldofcoding.net/github-img/otland-gitbook/phpversion.png "phpversion")
+![alt text](https://worldofcoding.com/github/images/otland-gitbook/phpversion.png "phpversion")
 
 Second we want to do is enabling php in our nginx server and setting the configuration just as we want. So we will be going to edit our nginx config. Now we need to install a command line text editor called "vim". After that we installed it we will directly open the configuration file.
 ```bash
@@ -57,7 +52,7 @@ We can change the 'root' directory of the website folder, if you're only using y
 
 ## Configuring php
 
-I already enabled php here by writing 'index.php' on line number '24'. I've uncommented the php location settings we need to use. To make it easy and understanding I made own comments for you guys to know which lines to comment and uncomment, depending on which ubuntu server version you are running ( and assuming you're using ubuntu server 18.04 lts ).
+I already enabled php here by writing 'index.php' on line number '24'. I've uncommented the php location settings we need to use. To make it easy and understanding I made own comments for you guys to know which lines to comment and uncomment, depending on which Ubuntu Server version you are running ( and assuming you're using Ubuntu Server 18.04 lts ).
 ```bash
 server {
         listen 80 default_server;
@@ -111,7 +106,7 @@ We need to create ourselves a mysql admin account. We will be doing this the fol
 ```bash
 sudo mariadb
 ```
-![alt text](https://worldofcoding.net/github-img/otland-gitbook/mariadb.png "mariadb")
+![alt text](https://worldofcoding.com/github/images/otland-gitbook/mariadb.png "mariadb")
 ###### You are inside the database right now!
 
 We will be creating the user 'otadmin' with the password of 'otadminpassword', change these values to what you want it to be!
@@ -176,3 +171,31 @@ Now we have to enable the phpmyadmin configuration for nginx we do that by runni
 `sudo ln -s /etc/nginx/sites-available/phpmyadmin /etc/nginx/sites-enabled/phpmyadmin`
 
 Finally restart the nginx server with `sudo systemctl restart nginx` and we will be able to access phpmyadmin by http://youripordomain:2344 login with the database username and password we've created.
+
+# Setup your Server for TFS
+First of all we need to install a few packages to our system which makes us able to build the TFS sources.
+
+Directly copy'd from the TFS github wiki(https://github.com/otland/forgottenserver/wiki/Compiling-on-Ubuntu):
+## Install the required software
+
+The following command will install Git, CMake, a compiler and the libraries used by The Forgotten Server.
+
+Git will be used to download the source code, and CMake will be used to generate the build files.
+```bash
+sudo apt-get install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libboost-filesystem-dev libpugixml-dev libcrypto++-dev
+```
+## Download the source code
+
+```bash
+git clone --recursive https://github.com/otland/forgottenserver.git
+```
+## Generate the build files
+```bash
+cd forgottenserver
+mkdir build && cd build
+cmake ..
+```
+## Build
+```bash
+make
+```
