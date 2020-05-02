@@ -4,6 +4,8 @@
 
 ### Available methods:
 
+* [broadcastMessage\(message, messageType\)](lua_functions.md#Game-broadcastMessage)
+* [convertIpToString\(ip\)](lua_functions.md#Game-convertIpToString)
 * [createItem\(itemId, count\[, position\]\)](lua_functions.md#Game-createItem)
 * [createContainer\(itemId, size\[, position\]\)](lua_functions.md#Game-createContainer)
 * [createMonster\(monsterName, position\[, extended = false\[, force = false\]\]\)](lua_functions.md#Game-createMonster)
@@ -18,13 +20,54 @@
 * [getPlayerCount\(\)](lua_functions.md#Game-getPlayerCount)
 * [getPlayers\(\)](lua_functions.md#Game-getPlayers)
 * [getReturnMessage\(value\)](lua_functions.md#Game-getReturnMessage)
+* [getReverseDirection\(direction\)](lua_functions.md#Game-getReverseDirection)
+* [getSkillType\(weaponType\)](lua_functions.md#Game-getSkillType)
 * [getSpectators\(position\[, multifloor = false\[, onlyPlayer = false\[, minRangeX = 0\[, maxRangeX = 0\[, minRangeY = 0\[, maxRangeY = 0\]\]\]\]\]\]\)](lua_functions.md#Game-getSpectators)
+* [getStorageValue\(key\)](lua_functions.md#Game-getStorageValue)
 * [getTowns\(\)](lua_functions.md#Game-getTowns)
 * [getWorldType\(\)](lua_functions.md#Game-getWorldType)
 * [loadMap\(path\)](lua_functions.md#Game-loadMap)
 * [setGameState\(state\)](lua_functions.md#Game-setGameState)
+* [setStorageValue\(key, value\)](lua_functions.md#Game-setStorageValue)
 * [setWorldType\(type\)](lua_functions.md#Game-setWorldType)
 * [startRaid\(raidName\)](lua_functions.md#Game-startRaid)
+
+
+#### Game.broadcastMessage\(message, messageType\)
+
+> **Description:** Send message to all players
+> **Parameters:**  **Returns:** Nothing
+> **Example:**
+>
+> ```lua
+> local message = 'Hello'
+> local messageType = MESSAGE_STATUS_DEFAULT
+> Game.broadcastMessage(message, messageType)
+> ```
+>
+> **Added in version:** 1.0
+
+#### Game.convertIpToString\(ip\)
+
+> **Description:** Convert numeric representation of IPv4 to string with dot separated octets
+> **Parameters:**  **Returns:** String
+> **Example:**
+>
+> ```lua
+> function Player:onLook(thing, position, distance)
+>   if thing:isCreature() then
+>     if thing:isPlayer() then
+>       local playerIp = thing:getIp()
+>       local ip = Game.convertIpToString(playerIp)
+>       local description = string.format("IP: [%s].", ip)
+>     end
+>   end
+>   self:sendTextMessage(MESSAGE_INFO_DESCR, description)
+>   return true
+> end
+> ```
+>
+> **Added in version:** 1.0
 
 #### Game.createItem\(itemId, count\[, position\]\)
 
@@ -237,6 +280,35 @@
 >
 > **Added in version:** 1.0
 
+#### Game.getReverseDirection\(direction\)
+
+> **Description:** Gets reversed direction.
+> **Parameters:**  **Returns:** Direction \(integer\)
+> **Example:**
+>
+> ```lua
+> local direction = DIRECTION_NORTH
+> local reversedDirection = Game.getReverseDirection(direction)
+> print('Numerical value of SOUTH direction is equel '.. tostring(reversedDirection))
+> ```
+>
+> **Added in version:** 1.0
+
+#### Game.getSkillType\(weaponType\)
+
+> **Description:** Gets skill type associatet with weapon type.
+> **Parameters:**  **Returns:** Skill type \(integer\)
+> **Example:**
+>
+> ```lua
+> local itemtype = ItemType(...)
+> local weaponType = itemtype:getWeaponType()
+> local skillType = Game.getSkillType(weaponType)
+> ```
+>
+> **Added in version:** 1.0
+
+
 #### Game.getSpectators\(position\[, multifloor = false\[, onlyPlayer = false\[, minRangeX = 0\[, maxRangeX = 0\[, minRangeY = 0\[, maxRangeY = 0\]\]\]\]\]\]\)
 
 > **Description:** Get all creatures in the area.  
@@ -250,6 +322,19 @@
 >     local spectator = spectators[i]
 >     spectator:say(spectator:getName(), TALKTYPE_SAY)
 > end
+> ```
+>
+> **Added in version:** 1.0
+
+#### Game.getStorageValue\(key\)
+
+> **Description:** Get value from globalStorageTable
+> **Parameters:**  **Returns:** Value from table on empty index nil value
+> **Example:**
+>
+> ```lua
+> local storage = Game.getStorageValue(1)
+> print(tostring(storage))
 > ```
 >
 > **Added in version:** 1.0
@@ -305,6 +390,18 @@
 > ```lua
 > -- Shutdown the server
 > Game.setGameState(GAME_STATE_SHUTDOWN)
+> ```
+>
+> **Added in version:** 1.0
+
+#### Game.setStorageValue\(key, value\)
+
+> **Description:** Insert value into globalStorageTable on specific key
+> **Parameters:**  **Returns:** Nothing
+> **Example:**
+>
+> ```lua
+> Game.setStorageValue(1, 1000)
 > ```
 >
 > **Added in version:** 1.0
@@ -408,4 +505,5 @@
 > ```
 >
 > **Added in version:** 1.0
+
 
