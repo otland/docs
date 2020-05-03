@@ -32,12 +32,9 @@
 * [setWorldType\(type\)](lua_functions.md#Game-setWorldType)
 * [startRaid\(raidName\)](lua_functions.md#Game-startRaid)
 
-
 #### Game.broadcastMessage\(message, messageType\)
 
-> **Description:** Send message to all players
-> **Parameters:**  **Returns:** Nothing
-> **Example:**
+> **Description:** Send message to all players **Parameters:** **Returns:** Nothing **Example:**
 >
 > ```lua
 > local message = 'Hello'
@@ -49,9 +46,7 @@
 
 #### Game.convertIpToString\(ip\)
 
-> **Description:** Convert numeric representation of IPv4 to string with dot separated octets
-> **Parameters:**  **Returns:** String
-> **Example:**
+> **Description:** Convert numeric representation of IPv4 to string with dot separated octets **Parameters:** **Returns:** String **Example:**
 >
 > ```lua
 > function Player:onLook(thing, position, distance)
@@ -72,7 +67,7 @@
 #### Game.createItem\(itemId, count\[, position\]\)
 
 > **Description:** Creates an item.  
-> **Parameters:**  **Returns:** The item created. \(userdata\)  
+> **Parameters:** **Returns:** The item created. \(userdata\)  
 > **Example:**
 >
 > ```lua
@@ -89,7 +84,7 @@
 #### Game.createContainer\(itemId, size\[, position\]\)
 
 > **Description:** Creates a container with given size.  
-> **Parameters:**  **Returns:** The container created. \(userdata\)  
+> **Parameters:** **Returns:** The container created. \(userdata\)  
 > **Example:**
 >
 > ```lua
@@ -106,7 +101,7 @@
 #### Game.createMonster\(monsterName, position\[, extended = false\[, force = false\]\]\)
 
 > **Description:** Creates a monster.  
-> **Parameters:**  **Returns:** The monster created. \(userdata\)  
+> **Parameters:** **Returns:** The monster created. \(userdata\)  
 > **Example:**
 >
 > ```lua
@@ -122,7 +117,7 @@
 #### Game.createNpc\(npcName, position\[, extended = false\[, force = false\]\]\)
 
 > **Description:** Creates a npc.  
-> **Parameters:**  **Returns:** The npc created. \(userdata\)  
+> **Parameters:** **Returns:** The npc created. \(userdata\)  
 > **Example:**
 >
 > ```lua
@@ -138,7 +133,7 @@
 #### Game.createTile\(x, y, z\[, isDynamic = false\]\)
 
 > **Description:** Creates a tile if it can.  
-> **Parameters:**  **Returns:** The tile created or the previous existing one. \(userdata\)  
+> **Parameters:** **Returns:** The tile created or the previous existing one. \(userdata\)  
 > **Example:**
 >
 > ```lua
@@ -154,7 +149,7 @@
 #### Game.createTile\(position\[, isDynamic = false\]\)
 
 > **Description:** Creates a tile if it can.  
-> **Parameters:**  **Returns:** The tile created or the previous existing one. \(userdata\)  
+> **Parameters:** **Returns:** The tile created or the previous existing one. \(userdata\)  
 > **Example:**
 >
 > ```lua
@@ -170,7 +165,7 @@
 #### Game.getExperienceStage\(level\)
 
 > **Description:** Find the experience rate related to a certain level.  
-> **Parameters:**  **Returns:** The experience rate related to the specified level.  
+> **Parameters:** **Returns:** The experience rate related to the specified level.  
 > **Example:**
 >
 > ```lua
@@ -269,7 +264,7 @@
 #### Game.getReturnMessage\(value\)
 
 > **Description:** Gets a message associated with the value.  
-> **Parameters:**  **Returns:** true  
+> **Parameters:** **Returns:** true  
 > **Example:**
 >
 > ```lua
@@ -282,9 +277,7 @@
 
 #### Game.getReverseDirection\(direction\)
 
-> **Description:** Gets reversed direction.
-> **Parameters:**  **Returns:** Direction \(integer\)
-> **Example:**
+> **Description:** Gets reversed direction. **Parameters:** **Returns:** Direction \(integer\) **Example:**
 >
 > ```lua
 > local direction = DIRECTION_NORTH
@@ -296,9 +289,7 @@
 
 #### Game.getSkillType\(weaponType\)
 
-> **Description:** Gets skill type associatet with weapon type.
-> **Parameters:**  **Returns:** Skill type \(integer\)
-> **Example:**
+> **Description:** Gets skill type associatet with weapon type. **Parameters:** **Returns:** Skill type \(integer\) **Example:**
 >
 > ```lua
 > local itemtype = ItemType(...)
@@ -308,11 +299,10 @@
 >
 > **Added in version:** 1.0
 
-
 #### Game.getSpectators\(position\[, multifloor = false\[, onlyPlayer = false\[, minRangeX = 0\[, maxRangeX = 0\[, minRangeY = 0\[, maxRangeY = 0\]\]\]\]\]\]\)
 
 > **Description:** Get all creatures in the area.  
-> **Parameters:**  **Returns:** A table containing creatures found \(userdata\).  
+> **Parameters:** **Returns:** A table containing creatures found \(userdata\).  
 > **Example:**
 >
 > ```lua
@@ -328,9 +318,7 @@
 
 #### Game.getStorageValue\(key\)
 
-> **Description:** Get value from globalStorageTable
-> **Parameters:**  **Returns:** Value from table on empty index nil value
-> **Example:**
+> **Description:** Get value from globalStorageTable **Parameters:** **Returns:** Value from table on empty index nil value **Example:**
 >
 > ```lua
 > local storage = Game.getStorageValue(1)
@@ -372,7 +360,7 @@
 #### Game.loadMap\(path\)
 
 > **Description:** This loads a new map chunk.  
-> **Parameters:**  **Returns:** Nothing  
+> **Parameters:** **Returns:** Nothing  
 > **Example:**
 >
 > ```lua
@@ -384,7 +372,7 @@
 #### Game.setGameState\(state\)
 
 > **Description:** Sets the current gamestate.  
-> **Parameters:**  **Returns:** true  
+> **Parameters:** **Returns:** true  
 > **Example:**
 >
 > ```lua
@@ -396,9 +384,7 @@
 
 #### Game.setStorageValue\(key, value\)
 
-> **Description:** Insert value into globalStorageTable on specific key
-> **Parameters:**  **Returns:** Nothing
-> **Example:**
+> **Description:** Insert value into globalStorageTable on specific key **Parameters:** **Returns:** Nothing **Example:**
 >
 > ```lua
 > Game.setStorageValue(1, 1000)
@@ -409,7 +395,7 @@
 #### Game.setWorldType\(type\)
 
 > **Description:** Sets the current world type.  
-> **Parameters:**  **Returns:** true  
+> **Parameters:** **Returns:** true  
 > **Example:**
 >
 > ```lua
@@ -422,7 +408,7 @@
 #### Game.startRaid\(raidName\)
 
 > **Description:** Starts a raid if one with said name exist.  
-> **Parameters:**  **Returns:** true if the raid started, nil otherwise.  
+> **Parameters:** **Returns:** true if the raid started, nil otherwise.  
 > **Example:**
 >
 > ```lua
@@ -442,7 +428,7 @@
 #### addEvent\(callback, delay, ...\)
 
 > **Description:** This function is used to run other functions at a later time.  
-> **Parameters:**  **Returns:** The id associated with this event.  
+> **Parameters:** **Returns:** The id associated with this event.  
 > **Example:**
 >
 > ```lua
@@ -455,7 +441,7 @@
 #### stopEvent\(eventid\)
 
 > **Description:** This function is used to stop functions that should run later.  
-> **Parameters:**  **Returns:** true if an event was stopped, false otherwise.  
+> **Parameters:** **Returns:** true if an event was stopped, false otherwise.  
 > **Example:**
 >
 > ```lua
@@ -494,7 +480,7 @@
 #### table.create\(arrayLength, keyLength\)
 
 > **Description:** Creates a new table with specified length.  
-> **Parameters:**  **Returns:** The created table.  
+> **Parameters:** **Returns:** The created table.  
 > **Example:**
 >
 > ```lua
@@ -505,5 +491,4 @@
 > ```
 >
 > **Added in version:** 1.0
-
 
