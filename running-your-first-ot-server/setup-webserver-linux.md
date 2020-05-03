@@ -57,7 +57,7 @@ We can change the 'root' directory of the website folder, if you're only using y
 
 ## Configuring php
 
-I already enabled php here by writing 'index.php' on line number '24'. I've uncommented the php location settings we need to use. To make it easy and understanding I made own comments for you guys to know which lines to comment and uncomment, depending on which Ubuntu Server version you are running ( and assuming you're using Ubuntu Server 20.04 LTS ).
+I already enabled php here by writing 'index.php' on line number '24'. I've uncommented the php location settings we need to use. To make it easy and understanding I made own comments for you guys to know which lines to comment and uncomment, depending on which Ubuntu Server version you are running ( and assuming you're using Ubuntu Server 18.04 LTS ).
 ```bash
 server {
         listen 80 default_server;
@@ -83,9 +83,9 @@ server {
         #
         #       # With php-fpm (or other unix sockets):
         ################## UBUNTU 18.04 LTS ##################
-        #       fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+               fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
         ################## UBUNTU 20.04 LTS ##################
-               fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+        #       fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
 
         }
 
@@ -157,9 +157,9 @@ server {
         include snippets/fastcgi-php.conf;
 
     ################## UBUNTU 18.04 LTS ##################
-    #       fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+           fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
     ################## UBUNTU 20.04 LTS ##################
-           fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+    #       fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
 
     }
 
