@@ -24,20 +24,25 @@ Now we will get to the more difficult part of the entire server setup, installin
 ```bash
 sudo apt install nginx php-fpm mariadb-server -y
 ```
-The installation process is now triggered.When this is finished we will install phpmyadmin to handle our database server (which is mariadb)
+The installation process is now triggered.When this is finished we will install phpmyadmin to handle our database server
 ```bash
 sudo apt install phpmyadmin -y
 ```
 Now we are set to get some configurations going!
 
 ## Configuring the webserver
+
 First we want to know which version of php-fpm is installed we will check this by writing the following command in the terminal
 ```bash
 sudo php -v
 ```
-The output will be looking something similar as this (I am using ubuntu 19.10 here which uses php version 7.3 as default. If you're running on a server you most likely run on 18.04 lts or with the newest version 20.04 lts):
-
-![alt text](https://worldofcoding.net/github-img/otland-gitbook/phpversion.png "phpversion")
+The output will be looking similar to this:
+```
+PHP 7.2.24-0ubuntu0.18.04.3 (cli) (built: Feb 11 2020 15:55:52) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.2.24-0ubuntu0.18.04.3, Copyright (c) 1999-2018, by Zend Technologies
+```
 
 Second we want to do is enabling php in our nginx server and setting the configuration just as we want. So we will be going to edit our nginx config. Now we need to install a command line text editor called "vim". After that we installed it we will directly open the configuration file.
 ```bash
@@ -52,7 +57,7 @@ We can change the 'root' directory of the website folder, if you're only using y
 
 ## Configuring php
 
-I already enabled php here by writing 'index.php' on line number '24'. I've uncommented the php location settings we need to use. To make it easy and understanding I made own comments for you guys to know which lines to comment and uncomment, depending on which Ubuntu Server version you are running ( and assuming you're using Ubuntu Server 18.04 lts ).
+I already enabled php here by writing 'index.php' on line number '24'. I've uncommented the php location settings we need to use. To make it easy and understanding I made own comments for you guys to know which lines to comment and uncomment, depending on which Ubuntu Server version you are running ( and assuming you're using Ubuntu Server 20.04 LTS ).
 ```bash
 server {
         listen 80 default_server;
@@ -78,9 +83,9 @@ server {
         #
         #       # With php-fpm (or other unix sockets):
         ################## UBUNTU 18.04 LTS ##################
-               fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+        #       fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
         ################## UBUNTU 20.04 LTS ##################
-        #       fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+               fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
 
         }
 
@@ -94,7 +99,7 @@ We are set with the entire webserver now and so its time to check if we actually
 `Change the number of the php-fpm version to one you're using!!!`
 ```bash
 sudo systemctl restart nginx
-sudo systemctl restart php7.2-fpm
+sudo systemctl restart php7.4-fpm
 ```
 Lets open our browser and goto your ip-address and see how wonderful you are!
 Your very own setup and configured server!
@@ -106,7 +111,7 @@ We need to create ourselves a mysql admin account. We will be doing this the fol
 ```bash
 sudo mariadb
 ```
-![alt text](https://worldofcoding.net/github-img/otland-gitbook/phpversion.png "phpversion")
+
 ###### You are inside the database right now!
 
 We will be creating the user 'otadmin' with the password of 'otadminpassword', change these values to what you want it to be!
@@ -120,6 +125,7 @@ Insert these lines one by one.
 Now we have setup our database superuser :)
 
 ## Configure phpmyadmin
+
 Setup phpmyadmin to access your database via the browser.
 
 Insert the following configuration in a new file inside the nginx folder. The following command will create the file and when you are in insert the configuration posted below.
@@ -151,9 +157,9 @@ server {
         include snippets/fastcgi-php.conf;
 
     ################## UBUNTU 18.04 LTS ##################
-           fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+    #       fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
     ################## UBUNTU 20.04 LTS ##################
-    #       fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+           fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
 
     }
 
@@ -173,29 +179,36 @@ Now we have to enable the phpmyadmin configuration for nginx we do that by runni
 Finally restart the nginx server with `sudo systemctl restart nginx` and we will be able to access phpmyadmin by http://youripordomain:2344 login with the database username and password we've created.
 
 # Setup your Server for TFS
+
 First of all we need to install a few packages to our system which makes us able to build the TFS sources.
 
 Directly copy'd from the TFS github wiki(https://github.com/otland/forgottenserver/wiki/Compiling-on-Ubuntu):
+
 ## Install the required software
 
 The following command will install Git, CMake, a compiler and the libraries used by The Forgotten Server.
 
 Git will be used to download the source code, and CMake will be used to generate the build files.
 ```bash
-sudo apt-get install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libboost-filesystem-dev libpugixml-dev libcrypto++-dev
+sudo apt install git cmake build-essential libluajit-5.1-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libboost-filesystem-dev libpugixml-dev libcrypto++-dev
 ```
+
 ## Download the source code
 
 ```bash
 git clone --recursive https://github.com/otland/forgottenserver.git
 ```
+
 ## Generate the build files
+
 ```bash
 cd forgottenserver
 mkdir build && cd build
 cmake ..
 ```
+
 ## Build
+
 ```bash
 make
 ```
