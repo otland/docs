@@ -1,5 +1,5 @@
 # Getting started
-Rent a Ubuntu Server 18.04 or higher from a trusted hosting company such or install for the sake of learning experience Ubuntu Server 18.04 or higher in VirtualBox.
+Rent a Ubuntu Server 18.04 or higher from a trusted hosting company or install for the sake of learning experience Ubuntu Server 18.04 or higher in VirtualBox.
 
 Once you're set we will start by accessing our server. If you're on windows you should get putty(https://www.putty.org/), if you're on macOS or Linux you can use the terminal which is standard available. With putty just follow the screen ( insert your domain/ip-address and click ok ) for macOS and linux users type:
 
@@ -49,7 +49,7 @@ Second we want to do is enabling php in our nginx server and setting the configu
 sudo apt install vim -y && sudo vim /etc/nginx/sites-available/default
 ```
 
-Now sit straight up and read carefully on what we're going to do. I am going to give you a few options in the configuration. Underneath here you will find the default configuration file of nginx. ( I only took the part of the config file we are in need to use and left out all the comments which we do use in this tutorial )
+I am going to give you a few options in the configuration. Underneath here you will find the default configuration file of nginx. ( I only took the part of the config file we are in need to use and left out all the comments which we do use in this tutorial )
 
 ## Changing the web-root
 
