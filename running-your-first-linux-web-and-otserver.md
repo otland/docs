@@ -121,7 +121,7 @@ We need to create ourselves a mysql admin account. We will be doing this the fol
 sudo mariadb
 ```
 
-![phpversion](https://worldofcoding.net/github-img/otland-gitbook/phpversion.png)
+![](.gitbook/assets/mariadb.png)
 
 #### You are inside the database right now!
 
