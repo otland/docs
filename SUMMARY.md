@@ -9,6 +9,8 @@
 * [TFS documentation](tfs-documentation/README.md)
   * [\(Upcoming\) TFS 1.4 official release](tfs-documentation/tfs-1.4.md)
   * [Lua functions](tfs-documentation/lua_functions.md)
+  * [LuaScript Interface](tfs-documentation/luascript-interface/README.md)
+    * [Game](tfs-documentation/luascript-interface/game_interface.md)
 * [Glossary](glossary.md)
 * [Running your first ubuntu linux OT](running-your-first-linux-web-and-otserver.md)
 
