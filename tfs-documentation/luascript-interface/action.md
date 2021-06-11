@@ -1,3 +1,7 @@
+---
+description: Action Event Interface
+---
+
 # Action
 
 * [Action.onUse\(\)](game_interface.md#game-getspectators)
@@ -23,7 +27,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey) -- can 
                 end
                 return target:sendTextMessag(MESSAGE_STATUS_WARNING,"Becareful someone with " ..Sword.. " is watching you")
             end
-              return player:sendTextMessage(MESSAGE_STATUS_SMALL,"You must have a clear path to your target")
+            return player:sendTextMessage(MESSAGE_STATUS_SMALL,"You must have a clear path to your target")
         end
         return player:sendTextMessage(MESSAGE_STATUS_SMALL,"Only extra strong items can weild such power")
     end
