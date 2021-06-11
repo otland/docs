@@ -1,5 +1,5 @@
 ---
-description: Action Script interface
+description: Action event interface
 ---
 
 # Action
@@ -11,6 +11,10 @@ description: Action Script interface
 {% hint style="info" %}
 **onUse** is an event of the class **Action**
 {% endhint %}
+
+onUse is called whenever an item registered to the action is used. You can register actions in data/actions/actions.xml
+
+After you have registered your action in actions.xml you can call the event in a script like so:
 
 ```lua
 function onUse(player, item, fromPosition, target, toPosition, isHotkey) -- can name the arguments what you like.
