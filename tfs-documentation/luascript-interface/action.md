@@ -30,7 +30,7 @@ description: Action's Event Interface
    <action fromid="2146" toid="2147" script="other/enchanting.lua" />
    ```
 
-3. Alternatively you can use revscript method to register via lua, by saving a .lua file in data/scripts folder.
+3. Alternatively you can use [revscript](https://app.gitbook.com/@otland/s/ots-guide/tfs-documentation/luascript-interface/action#revscript-action) method to register via lua, by saving a .lua file in data/scripts folder.
 
 **After you have registered your action in actions.xml you can call the event in a script like so:**
 
