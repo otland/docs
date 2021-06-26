@@ -16,7 +16,7 @@ description: Action's Event Interface
 > * **item** -- 2nd arg/parameter/ _**userdata**_/ = The first **item** player uses/use with.
 > * **fromPosition** - 3rd arg/parameter/_**userdata**_/ = The **position** the first item is at.
 > * **itemEx** -- 4th arg/parameter/_**userdata**_/ = The target of item's _Use With_, can be **item** or **creature**
-> * **toPosition** - 5th arg/parameter/ _**userdata**_/ = The position the first item is used on, with crosshairs.
+> * **toPosition** - 5th arg/parameter/ _**userdata**_/ = The **position** the first item is used on, with crosshairs.
 > * **isHotkey** - 6th arg/parameter/ _**boolean**_/ = Did the player use item via hot key? **True/False**.
 
 1. onUse is called whenever an item registered to the action is used. 
