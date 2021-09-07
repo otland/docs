@@ -133,6 +133,8 @@ Following these lines, you can find a changelog made of newly added features, is
   * Achievements system
   * isBoss flag
   * Store inbox
+  * Shopping bag module
+  * Server save configurations in config.lua
 
 **Fixed**
 
@@ -144,6 +146,7 @@ Following these lines, you can find a changelog made of newly added features, is
 * MoveEvent:slot\(slot\)
 * Crash related to map cleaning
 * Exception when map file does not exist is now handled
+* getMinMaxValues function returned a wrong attackValue when using weapons with ammunition
 
 ### Changed
 
@@ -157,4 +160,5 @@ Following these lines, you can find a changelog made of newly added features, is
 * Cleaner and faster XTEA implementation
 * Rebase of NetworkMessage methods
 * Usage of STL algorithms instead of loop in vocations.cpp
-
+* Optimizations on getSpectators
+* 
