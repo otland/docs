@@ -10,6 +10,7 @@
   * [TFS 1.4 official release](tfs-documentation/tfs-1.4.md)
   * [Lua functions](tfs-documentation/lua_functions.md)
   * [LuaScript Interface](tfs-documentation/luascript-interface/README.md)
+    * [CreatureEvent](tfs-documentation/luascript-interface/creatureevent.md)
     * [Action](tfs-documentation/luascript-interface/action.md)
     * [Game](tfs-documentation/luascript-interface/game_interface.md)
 * [Glossary](glossary.md)
