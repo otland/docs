@@ -201,7 +201,7 @@ The following command will install Git, CMake, a compiler and the libraries used
 Git will be used to download the source code, and CMake will be used to generate the build files.
 
 ```bash
-sudo apt-get install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libboost-filesystem-dev libpugixml-dev libcrypto++-dev
+sudo apt-get install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libboost-filesystem-dev libpugixml-dev libcrypto++-dev libfmt-dev
 ```
 
 ### Download the source code
