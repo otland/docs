@@ -4,9 +4,9 @@ description: Action's Event Interface
 
 # Action
 
-* [Action.onUse\(\)](game_interface.md#game-getspectators)
+* [Action.onUse()](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/game\_interface.md#game-getspectators)
 
-### Action.onUse\(player, item, fromPosition, itemEx, toPosition, isHotkey\)
+### Action.onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
 
 {% hint style="info" %}
 **onUse** is an event of the class **Action**
@@ -19,17 +19,16 @@ description: Action's Event Interface
 > * **toPosition** - 5th arg/parameter/ _**userdata**_/ = The **position** the first item is used on, with crosshairs.
 > * **isHotkey** - 6th arg/parameter/ _**boolean**_/ = Did the player use item via hot key? **True/False**.
 
-1. onUse is called whenever an item registered to the action is used. 
-2. You can register actions in data/actions/actions.xml
+1. onUse is called whenever an item registered to the action is used.&#x20;
+2.  You can register actions in data/actions/actions.xml
 
-   ```markup
-   <action itemid="4856" script="test.lua" />
-   ```
+    ```markup
+    <action itemid="4856" script="test.lua" />
+    ```
 
-   ```markup
-   <action fromid="2146" toid="2147" script="other/enchanting.lua" />
-   ```
-
+    ```markup
+    <action fromid="2146" toid="2147" script="other/enchanting.lua" />
+    ```
 3. Alternatively you can use [revscript](https://app.gitbook.com/@otland/s/ots-guide/tfs-documentation/luascript-interface/action#revscript-action) method to register via lua, by saving a .lua file in data/scripts folder.
 
 **After you have registered your action in actions.xml you can call the event in a script like so:**
@@ -83,7 +82,7 @@ end
 
 ## Revscript Action
 
-Revscript Actions share the same event **onUse\(\)** with the same arguments listed above.
+Revscript Actions share the same event **onUse()** with the same arguments listed above.
 
 To access any events through revscripts, you must create a variable first to access the interface
 
@@ -101,19 +100,19 @@ Revscript Action has the available _methods_ and _event_ to use with its interfa
 
 > **Event**
 >
-> * **onUse**\(player, item, fromPosition, itemEx, toPosition, isHotkey\)
+> * **onUse**(player, item, fromPosition, itemEx, toPosition, isHotkey)
 >
 > **Methods**
 >
-> * action:**register**\(\) -- Registers the action **event**. 
-> * action:**id**\(_**x**_\)    -- Registers items with **id** _**x**_ for event
-> * action:**aid**\(_**x**_\) -- Registers items with **action id** _**x**_ for event
-> * action:**uid**\(_**x**_\) -- Registers items with **unique id** _**x**_ for event
-> * action:**allowFarUse**\(t/f\) -- Allow far use? _**True/False**_
-> * action:**blockWalls**\(t/f\) -- Do walls block item usage? _**True/False**_
-> * action:**checkFloor**\(t/f\) -- Are we on same floor as target? _**True/False**_
+> * action:**register**() -- Registers the action **event**.&#x20;
+> * action:**id**(_**x**_)    -- Registers items with **id** _**x**_ for event
+> * action:**aid**(_**x**_) -- Registers items with **action id** _**x**_ for event
+> * action:**uid**(_**x**_) -- Registers items with **unique id** _**x**_ for event
+> * action:**allowFarUse**(t/f) -- Allow far use? _**True/False**_
+> * action:**blockWalls**(t/f) -- Do walls block item usage? _**True/False**_
+> * action:**checkFloor**(t/f) -- Are we on same floor as target? _**True/False**_
 
-## Action:id\(\)
+## Action:id()
 
 ```lua
 local swordTechnique = Action() -- we created a variable to access Action interface
@@ -121,7 +120,7 @@ local swordTechnique = Action() -- we created a variable to access Action interf
 swordTechnique:id(2376) -- sword's itemId to register for event
 ```
 
-## Action:aid\(\)
+## Action:aid()
 
 ```lua
 local swordTechnique = Action() -- we created a variable to access Action interface
@@ -129,7 +128,7 @@ local swordTechnique = Action() -- we created a variable to access Action interf
 swordTechnique:aid(15428) -- an actionId to register for event
 ```
 
-## Action:uid\(\)
+## Action:uid()
 
 ```lua
 local swordTechnique = Action() -- we created a variable to access Action interface
@@ -137,7 +136,7 @@ local swordTechnique = Action() -- we created a variable to access Action interf
 swordTechnique:uid(1337) -- a uniqueId to register for event
 ```
 
-## Action:allowFarUse\(\)
+## Action:allowFarUse()
 
 ```lua
 local swordTechnique = Action() -- we created a variable to access Action interface
@@ -145,7 +144,7 @@ local swordTechnique = Action() -- we created a variable to access Action interf
 swordTechnique:allowFarUse(true) -- True/False. True we can be more than one square away to use
 ```
 
-## Action:blockWalls\(\)
+## Action:blockWalls()
 
 ```lua
 local swordTechnique = Action() -- we created a variable to access Action interface
@@ -153,7 +152,7 @@ local swordTechnique = Action() -- we created a variable to access Action interf
 swordTechnique:blockWalls(true) -- True/false. True and walls will block usage of item.
 ```
 
-## Action:checkFloor\(\)
+## Action:checkFloor()
 
 ```lua
 local swordTechnique = Action() -- we created a variable to access Action interface
@@ -232,4 +231,3 @@ end
 -- Finally after all logic is completed, we register the event, still using swordTechnique
 swordTechnique:register()
 ```
-

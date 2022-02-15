@@ -6,29 +6,28 @@ description: CreatureEvent Interface
 
 There are many types of events for the CreatureEvent interface, here is a list.
 
-* [onLogin\(player\)](creatureevent_interface.md#onLogin)
-* [onLogout\(player\)](creatureevent_interface.md#onLogin)
-* [onThink\(creature, interval\)](creatureevent_interface.md#onLogin)
-* [onPrepareDeath\(creature, killer\)](creatureevent_interface.md#onLogin)
-* [onDeath\(creature, corpse, killer, mostDamageKiller, lastHitUnjustified, mostDamageUnjustified\)](creatureevent_interface.md#onLogin)
-* [onKill\(creature, target\)](creatureevent_interface.md#onLogin)
-* [onAdvance\(player, skill, oldLevel, newLevel\)](creatureevent_interface.md#onLogin)
-* [onModalWindow\(player, modalWindowId, buttonId, choiceId\)](creatureevent_interface.md#onLogin)
-* [onTextEdit\(player, item, text\)](creatureevent_interface.md#onLogin)
-* [onHealthChange\(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin\)](creatureevent_interface.md#onLogin)
-* [onExtendedOpCode\(player, opcode, buffer\)](creatureevent_interface.md#onLogin)
+* [onLogin(player)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
+* [onLogout(player)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
+* [onThink(creature, interval)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
+* [onPrepareDeath(creature, killer)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
+* [onDeath(creature, corpse, killer, mostDamageKiller, lastHitUnjustified, mostDamageUnjustified)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
+* [onKill(creature, target)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
+* [onAdvance(player, skill, oldLevel, newLevel)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
+* [onModalWindow(player, modalWindowId, buttonId, choiceId)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
+* [onTextEdit(player, item, text)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
+* [onHealthChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
+* [onExtendedOpCode(player, opcode, buffer)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
 
 1. You can create a CreatureEvent script in data/creaturescripts/scripts folder, but
-2. You must register CreatureEvents in data/creaturescripts/creaturescripts.xml, here is an example
+2.  You must register CreatureEvents in data/creaturescripts/creaturescripts.xml, here is an example
 
-   ```markup
-   <event type="login" name="PlayerLogin" script="login.lua" />
-   ```
-
+    ```markup
+    <event type="login" name="PlayerLogin" script="login.lua" />
+    ```
 3. Alternatively you can use revscript method to register via lua, by saving a .lua file in data/scripts folder.
 4. Any CreatureEvent that is not onLogin, must be registered to the creature before it will be used by the creature.
 
-## onLogin\(player\)
+## onLogin(player)
 
 {% hint style="info" %}
 **onLogin** is an event of the interface **CreatureEvent**
@@ -56,7 +55,7 @@ end
 
 **Always remember to return true if you wish to allow player login, returning false or not returning true will block player from logging in!**
 
-## onLogout\(player\)
+## onLogout(player)
 
 {% hint style="info" %}
 **onLogout** is an event of the interface **CreatureEvent**
@@ -80,4 +79,3 @@ end
 ```
 
 **Always remember to return true if you wish to allow player logout, returning false or not returning true will block player from logging out!**
-

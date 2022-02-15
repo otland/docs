@@ -16,4 +16,3 @@
     * [GlobalEvents](tfs-documentation/luascript-interface/globalevents.md)
 * [Glossary](glossary.md)
 * [Running your first ubuntu linux OT](running-your-first-linux-web-and-otserver.md)
-* [Page 1](page-1.md)
