@@ -1,43 +1,44 @@
----
-description: CreatureEvent Interface
----
-
 # CreatureEvent
 
 There are many types of events for the CreatureEvent interface, here is a list.
 
-* [onLogin(player)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
-* [onLogout(player)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
-* [onThink(creature, interval)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
-* [onPrepareDeath(creature, killer)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
-* [onDeath(creature, corpse, killer, mostDamageKiller, lastHitUnjustified, mostDamageUnjustified)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
-* [onKill(creature, target)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
-* [onAdvance(player, skill, oldLevel, newLevel)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
-* [onModalWindow(player, modalWindowId, buttonId, choiceId)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
-* [onTextEdit(player, item, text)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
-* [onHealthChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
-* [onExtendedOpCode(player, opcode, buffer)](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/creatureevent\_interface.md#onLogin)
+* onLogin(player)
+* onLogout(player)
+* onThink(creature, interval)
+* onPrepareDeath(creature, killer)
+* onDeath(creature, corpse, killer, mostDamageKiller, lastHitUnjustified, mostDamageUnjustified)
+* onKill(creature, target)
+* onAdvance(player, skill, oldLevel, newLevel)
+* onModalWindow(player, modalWindowId, buttonId, choiceId)
+* onTextEdit(player, item, text)
+* onHealthChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
+* onExtendedOpCode(player, opcode, buffer)
 
 1. You can create a CreatureEvent script in data/creaturescripts/scripts folder, but
-2.  You must register CreatureEvents in data/creaturescripts/creaturescripts.xml, here is an example
+2. You must register CreatureEvents in data/creaturescripts/creaturescripts.xml, here is an example
 
-    ```markup
-    <event type="login" name="PlayerLogin" script="login.lua" />
-    ```
-3. Alternatively you can use revscript method to register via lua, by saving a .lua file in data/scripts folder.
-4. Any CreatureEvent that is not onLogin, must be registered to the creature before it will be used by the creature.
+```xml
+<event type="logout" name="PlayerLogout" script="logout.lua" />
+```
+
+1. Alternatively you can use revscript method to register via lua, by saving a .lua file in data/scripts folder.
+2. Any CreatureEvent that is **not onLogin**, **must** be registered to the creature using the creature:registerEvent(name) method, where name is the name of the event in the xml file (unless is revscript, then name is created when event is created), our above example would be done like this : creature:registerEvent("PlayerLogout") before it will be used by the creature. Remember player, monster, and npc inherit from creature so you can do player:registerEvent("PlayerLogout") as player inherits from creature.
 
 ## onLogin(player)
 
-{% hint style="info" %}
-**onLogin** is an event of the interface **CreatureEvent**
-{% endhint %}
-
-> * **player**  -- 1st arg/parameter /_**userdata**_/  =  The **player** who is trying to login
+> * **player** -- 1st arg/parameter /_**userdata**_/ = The **player** who is trying to login
 
 onLogin is called whenever any player tries to log in, its a great spot to register other CreatureEvents to players.
 
-**After you have registered your event in creaturescripts.xml you can call the event in a script like so:**
+**You can register your event in creaturescripts.xml like so:**
+
+```xml
+<event type="login" name="PlayerLogin" script="login.lua" />
+```
+
+**You can then call the event in a script like so:**
+
+login.lua
 
 ```lua
 local firstItems = {2050, 2382} --- table with items for new player
@@ -57,15 +58,19 @@ end
 
 ## onLogout(player)
 
-{% hint style="info" %}
-**onLogout** is an event of the interface **CreatureEvent**
-{% endhint %}
-
-> * **player**  -- 1st arg/parameter /_**userdata**_/  =  The **player** who is trying to logout
+> * **player** -- 1st arg/parameter /_**userdata**_/ = The **player** who is trying to logout
 
 onLogout is called whenever any player tries to logout, its a great spot to unregister other CreatureEvents to players.
 
-**After you have registered your event in creaturescripts.xml you can call the event in a script like so:**
+**You can register your event in creaturescripts.xml like so:**
+
+```xml
+<event type="logout" name="PlayerLogout" script="logout.lua" />
+```
+
+**You can then call the event in a script like so:**
+
+logout.lua
 
 ```lua
 function onLogout(player)
@@ -79,3 +84,62 @@ end
 ```
 
 **Always remember to return true if you wish to allow player logout, returning false or not returning true will block player from logging out!**
+
+## onThink(creature, interval)
+
+> * **creature** -- 1st arg/parameter /_**userdata**_/ = The **creature** whom the event is triggering on
+> * **interval** -- 2nd arg/parameter /_**integer**_/ = The **milliseconds** interval at which every iteration of the event will take place
+
+onThink is similar to an infinite loop, as it does not stop unless the event is unregistered. It occurs every 1000 milliseconds, so once every second.
+
+**You can register your event in creaturescripts.xml like so:**
+
+```xml
+<event type="think" name="thinkEvent" script="think.lua" />
+```
+
+**You can then call the event in a script like so:**
+
+think.lua
+
+```lua
+function onThink(creature)
+    if creature:isMonster() then
+        creature:say("I'm hungry") --- if its a monster, says "I'm hungry"
+        return true -- we return now as we have done as we intended
+    end
+
+    return true --- here we are returning incase creature wasn't a monster
+end
+```
+
+**onThink doesn't require a return value of true to execute, returns are still valuable as a means of control over the script logic, and its good practice to use them, to make it a habit of knowing what your return should be**
+
+## onPrepareDeath(creature, killer)
+
+> * **creature** -- 1st arg/parameter /_**userdata**_/ = The **creature** that is preparing to die, can be a monster, player, or npc
+> * **killer** -- 2nd arg/parameter /_**userdata**_/ = The **killer** is who killed the creature, can be a monster, player or npc
+
+onPrepareDeath triggers **before creature death**, and so you can return false to prevent the death from happening. This is particularly useful for pvp arena and special event scenarios.
+
+**You can register your event in creaturescripts.xml like so:**
+
+```xml
+<event type="preparedeath" name="deathPrep" script="preparedeath.lua" />
+```
+
+**You can then call the event in a script like so:**
+
+preparedeath.lua
+
+```lua
+function onPrepareDeath(creature, killer)
+    if creature:isMonster() and killer:isMonster() then
+        return false -- returning false will prevent the monster from dieing to another monster, but not give it any hp back
+    end
+
+    return true --- it wasn't a monster killing a monster so we allow the death by returning true
+end
+```
+
+**When returning false for onPrepareDeath , the creature will not die! Return true to continue with death of creature**
