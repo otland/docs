@@ -4,13 +4,7 @@ description: Action's Event Interface
 
 # Action
 
-*
-
 ### onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
-
-{% hint style="info" %}
-**onUse** is an event of the class **Action**
-{% endhint %}
 
 > * **player**  -- 1st arg/parameter /_**userdata**_/  =  The **player** who uses the item.
 > * **item** -- 2nd arg/parameter/ _**userdata**_/ = The first **item** player uses/use with.
@@ -19,8 +13,8 @@ description: Action's Event Interface
 > * **toPosition** - 5th arg/parameter/ _**userdata**_/ = The **position** the first item is used on, with crosshairs.
 > * **isHotkey** - 6th arg/parameter/ _**boolean**_/ = Did the player use item via hot key? **True/False**.
 
-1. onUse is called whenever an item registered to the action is used.&#x20;
-2.  You can register actions in data/actions/actions.xml
+1. **onUse** is called whenever an item registered to the action is used.&#x20;
+2.  You can register actions in data/actions/**actions.xml**
 
     ```markup
     <action itemid="4856" script="test.lua" />
@@ -29,7 +23,7 @@ description: Action's Event Interface
     ```markup
     <action fromid="2146" toid="2147" script="other/enchanting.lua" />
     ```
-3. Alternatively you can use [revscript](action.md#revscript-action) method to register via lua, by saving a .lua file in data/scripts folder.
+3. Alternatively you can use [revscript](action.md#revscript-action) method to register via _lua_, by saving a .lua file in data/scripts folder.
 
 **After you have registered your action in actions.xml you can call the event in a script like so:**
 
@@ -82,9 +76,9 @@ end
 
 ## Revscript Action
 
-Revscript Actions share the same event **onUse()** with the same arguments listed above.
+**Revscript** share the same event **onUse()** with the same arguments listed above.
 
-To access any events through revscripts, you must create a variable first to access the interface
+To access any events through _revscripts_, you must create a variable first to access the interface
 
 {% hint style="warning" %}
 > you **must** have **one** variable **per event** callback no matter which type of interface you wish to access!
@@ -96,7 +90,7 @@ Here is an example.
 local swordTechnique = Action() -- we created a variable to access Action interface
 ```
 
-Revscript Action has the available _methods_ and _event_ to use with its interface
+**Action** has the available _**methods**_ and _**event**_ to use with _**revscripts**_
 
 > **Event**
 >
@@ -231,3 +225,4 @@ end
 -- Finally after all logic is completed, we register the event, still using swordTechnique
 swordTechnique:register()
 ```
+
