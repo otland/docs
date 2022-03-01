@@ -2,10 +2,10 @@
 
 There are many types of events for the CreatureEvent interface, here is a list.
 
-* onLogin(player)
-* onLogout(player)
-* onThink(creature, interval)
-* onPrepareDeath(creature, killer)
+* [onLogin(player)](creatureevent.md#onlogin-player)
+* [onLogout(player)](creatureevent.md#onlogout-player)
+* [onThink(creature, interval)](creatureevent.md#onthink-creature-interval)
+* [onPrepareDeath(creature, killer)](creatureevent.md#onpreparedeath-creature-killer)
 * onDeath(creature, corpse, killer, mostDamageKiller, lastHitUnjustified, mostDamageUnjustified)
 * onKill(creature, target)
 * onAdvance(player, skill, oldLevel, newLevel)
