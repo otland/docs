@@ -4,9 +4,9 @@ description: Action's Event Interface
 
 # Action
 
-* [Action.onUse()](https://app.gitbook.com/s/-LVBMVPm-MlN4K7ZoPJo/tfs-documentation/luascript-interface/game\_interface.md#game-getspectators)
+* [onUse()](action.md#action.onuse-player-item-fromposition-itemex-toposition-ishotkey)
 
-### Action.onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
+### onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
 
 {% hint style="info" %}
 **onUse** is an event of the class **Action**
@@ -100,17 +100,17 @@ Revscript Action has the available _methods_ and _event_ to use with its interfa
 
 > **Event**
 >
-> * **onUse**(player, item, fromPosition, itemEx, toPosition, isHotkey)
+> * ****[**onUse**](action.md#action.onuse-player-item-fromposition-itemex-toposition-ishotkey)(player, item, fromPosition, itemEx, toPosition, isHotkey)
 >
 > **Methods**
 >
 > * action:**register**() -- Registers the action **event**.&#x20;
-> * action:**id**(_**x**_)    -- Registers items with **id** _**x**_ for event
-> * action:**aid**(_**x**_) -- Registers items with **action id** _**x**_ for event
-> * action:**uid**(_**x**_) -- Registers items with **unique id** _**x**_ for event
-> * action:**allowFarUse**(t/f) -- Allow far use? _**True/False**_
-> * action:**blockWalls**(t/f) -- Do walls block item usage? _**True/False**_
-> * action:**checkFloor**(t/f) -- Are we on same floor as target? _**True/False**_
+> * [action:**id**(_**x**_)](action.md#action-id)    -- Registers items with **id** _**x**_ for event
+> * [action:**aid**(_**x**_)](action.md#action-aid) -- Registers items with **action id** _**x**_ for event
+> * [action:**uid**(_**x**_)](action.md#action-uid) -- Registers items with **unique id** _**x**_ for event
+> * [action:**allowFarUse**(t/f)](action.md#action-allowfaruse) -- Allow far use? _**True/False**_
+> * [action:**blockWalls**(t/f)](action.md#action-blockwalls) -- Do walls block item usage? _**True/False**_
+> * [action:**checkFloor**(t/f)](action.md#action-checkfloor) -- Are we on same floor as target? _**True/False**_
 
 ## Action:id()
 

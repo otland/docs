@@ -1,10 +1,10 @@
 # GlobalEvents
 
-* onStartup()
-* onShutdown()
-* onRecord()
-* onTime()
-* onThink()
+* [onStartup()](globalevents.md#onstartup)
+* [onShutdown()](globalevents.md#onshutdown)
+* [onRecord()](globalevents.md#onrecord)
+* [onTime()](globalevents.md#ontime)
+* [onThink()](globalevents.md#onthink)
 
 ### onStartUp()
 
