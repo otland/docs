@@ -4,7 +4,7 @@ description: Action's Event Interface
 
 # Action
 
-* [onUse()](action.md#action.onuse-player-item-fromposition-itemex-toposition-ishotkey)
+*
 
 ### onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
 
