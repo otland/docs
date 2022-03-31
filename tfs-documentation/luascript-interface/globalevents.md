@@ -1,14 +1,14 @@
 # GlobalEvents
 
-* [onStartup()](globalevents.md#onstartup)
-* [onShutdown()](globalevents.md#onshutdown)
-* [onRecord()](globalevents.md#onrecord)
-* [onTime()](globalevents.md#ontime)
-* [onThink()](globalevents.md#onthink)
+* ****[**onStartup**](globalevents.md#onstartup)**()**
+* ****[**onShutdown**](globalevents.md#onshutdown)**()**
+* ****[**onRecord**](globalevents.md#onrecord)**(current, old)**
+* ****[**onTime**](globalevents.md#ontime)**(interval)**
+* ****[**onThink**](globalevents.md#onthink)**(interval)**
 
 ### onStartUp()
 
-**onStartup** has no parameters, requires no return, and _**only runs once**_ during the start of the server.
+**onStartup has no parameters, requires no return, and **_**only runs once**_** during the start of the server.**
 
 **Example** _startup.lua_
 
@@ -18,7 +18,7 @@ function onStartup()
 end
 ```
 
-You can register in **data/globalevents/globalevents.xml** by using **type**="_startup_" like so:
+**You can register in data/globalevents/globalevents.xml by using type="**_**startup**_**" like so:**
 
 ```xml
 <globalevent type="startup" name="ServerStartup" script="startup.lua" />
@@ -26,7 +26,7 @@ You can register in **data/globalevents/globalevents.xml** by using **type**="_s
 
 ### onShutdown()
 
-**onShutdown** has no parameters, requires no return, and _**only runs once**_ during the shutdown of the server
+**onShutdown has no parameters, requires no return, and **_**only runs once**_** during the shutdown of the server**
 
 **Example** _shutdown.lua_
 
@@ -38,15 +38,15 @@ function onShutdown()
 end
 ```
 
-You can register in **data/globalevents/globalevents.xml** by using **type**="_shutdown_" like so:
+**You can register in data/globalevents/globalevents.xml by using type="**_**shutdown**_**" like so:**
 
 ```xml
 <globalevent type="shutdown" name="ServerShutdown" script="shutdown.lua" />
 ```
 
-### onRecord()
+### onRecord(current, old)
 
-**onRecord** has two parameters, _**requires return true**_, and runs each time a new record is made for most players online
+**onRecord has two parameters, **_**requires return true**_**, and runs each time a new record is made for most players online**
 
 > * **current** -- number value of new record, for most players online
 > * **old** -- number value of old record, for most players online
@@ -60,7 +60,7 @@ function onRecord(current, old)
 end
 ```
 
-You can register in **data/globalevents/globalevents.xml** by using **type**="_record_" like so:
+**You can register in data/globalevents/globalevents.xml by using type="**_**record**_**" like so:**
 
 ```xml
 <globalevent type="record" name="PlayerRecord" script="record.lua" />
@@ -68,7 +68,7 @@ You can register in **data/globalevents/globalevents.xml** by using **type**="_r
 
 ### onTime()
 
-**onTime** has one parameter which represents the _**time**_ it executes, requires return true, and **runs each each day at same time**
+**onTime has one parameter which represents the **_**time**_** it executes, requires return true, and runs each each day at same time**
 
 **Example** _ontime.lua_
 
@@ -79,7 +79,7 @@ function onTime(interval)
 end
 ```
 
-You can register in **data/globalevents/globalevents.xml** by giving it a unique name and setting the time using **time**="_time_" like so:
+**You can register in data/globalevents/globalevents.xml by giving it a unique name and setting the time using time="**_**time**_**" like so:**
 
 ```xml
 <globalevent name="StartDragonRaid" time="09:55:00" script="ontime.lua" />
@@ -87,7 +87,7 @@ You can register in **data/globalevents/globalevents.xml** by giving it a unique
 
 ### onThink()
 
-**onThink** has one parameter which represents how often it executes in _milliseconds_, **requires return true**, and **runs as often as specified** in _**globalevents.xml**_
+**onThink has one parameter which represents how often it executes in **_**milliseconds**_**, requires return true, and runs as often as specified in **_**globalevents.xml**_
 
 **Example** _onthink.lua_
 
@@ -100,7 +100,7 @@ function onThink(interval)
 end
 ```
 
-You can register in **data/globalevents/globalevents.xml** by giving it a unique name and setting how often it will execute using interval="1000" _**time is in milliseconds**_
+**You can register in data/globalevents/globalevents.xml by giving it a unique name and setting how often it will execute using interval="1000" **_**time is in milliseconds**_
 
 ```xml
 <globalevent name="SaveOnThink" interval="10000" script="onthink.lua" />
