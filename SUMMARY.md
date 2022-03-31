@@ -1,6 +1,17 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Compiling](compiling/README.md)
+  * [Compile on Arch](compiling/compile-on-arch.md)
+  * [Compiling on CentOS](compiling/compiling-on-centos.md)
+  * [Compiling on Debian GNU Linux](compiling/compiling-on-debian-gnu-linux.md)
+  * [Compiling on Fedora](compiling/compiling-on-fedora.md)
+  * [Compiling on FreeBSD](compiling/compiling-on-freebsd.md)
+  * [Compiling on Gentoo](compiling/compiling-on-gentoo.md)
+  * [Compiling on Mac OS X](compiling/compiling-on-mac-os-x.md)
+  * [Compiling on Ubuntu](compiling/compiling-on-ubuntu.md)
+  * [Compiling on Windows](compiling/compiling-on-windows.md)
+  * [Compiling on Windows (vcpkg)](compiling/compiling-on-windows-vcpkg.md)
 * [Running your first OT Server](running-your-first-ot-server/README.md)
   * [Setting up your first server](running-your-first-ot-server/setting-up-your-first-server.md)
   * [Connecting to your server](running-your-first-ot-server/connecting-to-your-server.md)
