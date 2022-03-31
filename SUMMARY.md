@@ -18,6 +18,7 @@
   * [Editing your datapack](running-your-first-ot-server/editing-your-data-pack.md)
   * [Opening your server to the public](running-your-first-ot-server/opening-your-server-to-the-public.md)
 * [TFS documentation](tfs-documentation/README.md)
+  * [Metatables](tfs-documentation/metatables.md)
   * [TFS 1.4 official release](tfs-documentation/tfs-1.4.md)
   * [Lua functions](tfs-documentation/lua\_functions.md)
   * [LuaScript Interface](tfs-documentation/luascript-interface/README.md)
