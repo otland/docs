@@ -11,6 +11,7 @@
   * [Lua functions](tfs-documentation/lua\_functions.md)
   * [LuaScript Interface](tfs-documentation/luascript-interface/README.md)
     * [Action](tfs-documentation/luascript-interface/action.md)
+    * [ChatChannel](tfs-documentation/luascript-interface/chatchannel.md)
     * [CreatureEvent](tfs-documentation/luascript-interface/creatureevent.md)
     * [Game](tfs-documentation/luascript-interface/game\_interface.md)
     * [GlobalEvents](tfs-documentation/luascript-interface/globalevents.md)
