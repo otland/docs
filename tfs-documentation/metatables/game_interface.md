@@ -1,42 +1,42 @@
 # Game
 
-* [Game.getSpectators\(\)](game_interface.md#game-getspectators)
-* [Game.getPlayers\(\)](game_interface.md#game-getplayers)
-* [Game.loadMap\(\)](game_interface.md#game-loadmap)
-* [Game.getExperienceStage\(\)](game_interface.md#game-getexperiencestages)
-* [Game.getMonstersCount\(\)](game_interface.md#game-getmonsterscount)
-* [Game.getPlayersCount\(\)](game_interface.md#game-getplayerscount)
-* [Game.getNpcCount\(\)](game_interface.md#game-getnpccount)
-* [Game.getMonsterTypes\(\)](game_interface.md#game-getmonstertypes)
-* [Game.getTowns\(\)](game_interface.md#game-gettowns)
-* [Game.getHouses\(\)](game_interface.md#game-gethouses)
-* [Game.getGameState\(\)](game_interface.md#game-getgamestate)
-* [Game.setGameState\(\)](game_interface.md#game-setgamestate)
-* [Game.getWorldType\(\)](game_interface.md#game-getworldtype)
-* [Game.setWorldType\(\)](game_interface.md#game-setworldtype)
-* [Game.getReturnMessage\(\)](game_interface.md#game-getreturnmessage)
-* [Game.createItem\(\)](game_interface.md#game-createitem)
-* [Game.createContainer\(\)](game_interface.md#game-createcontainer)
-* [Game.createMonster\(\)](game_interface.md#game-getmonsterscount)
-* [Game.createNpc\(\)](game_interface.md#game-createnpc)
-* [Game.createTile\(\)](game_interface.md#game-createitem)
-* [Game.createMonsterType\(\)](game_interface.md#game-createmonstertype)
-* [Game.startRaid\(\)](game_interface.md#game-startraid)
-* [Game.getClientVersion\(\)](game_interface.md#game-getclientversion)
-* [Game.reload\(\)](game_interface.md#game-reload)
+* [Game.getSpectators()](game\_interface.md#game-getspectators)
+* [Game.getPlayers()](game\_interface.md#game-getplayers)
+* [Game.loadMap()](game\_interface.md#game-loadmap)
+* [Game.getExperienceStage()](game\_interface.md#game-getexperiencestages)
+* [Game.getMonstersCount()](game\_interface.md#game-getmonsterscount)
+* [Game.getPlayersCount()](game\_interface.md#game-getplayerscount)
+* [Game.getNpcCount()](game\_interface.md#game-getnpccount)
+* [Game.getMonsterTypes()](game\_interface.md#game-getmonstertypes)
+* [Game.getTowns()](game\_interface.md#game-gettowns)
+* [Game.getHouses()](game\_interface.md#game-gethouses)
+* [Game.getGameState()](game\_interface.md#game-getgamestate)
+* [Game.setGameState()](game\_interface.md#game-setgamestate)
+* [Game.getWorldType()](game\_interface.md#game-getworldtype)
+* [Game.setWorldType()](game\_interface.md#game-setworldtype)
+* [Game.getReturnMessage()](game\_interface.md#game-getreturnmessage)
+* [Game.createItem()](game\_interface.md#game-createitem)
+* [Game.createContainer()](game\_interface.md#game-createcontainer)
+* [Game.createMonster()](game\_interface.md#game-getmonsterscount)
+* [Game.createNpc()](game\_interface.md#game-createnpc)
+* [Game.createTile()](game\_interface.md#game-createitem)
+* [Game.createMonsterType()](game\_interface.md#game-createmonstertype)
+* [Game.startRaid()](game\_interface.md#game-startraid)
+* [Game.getClientVersion()](game\_interface.md#game-getclientversion)
+* [Game.reload()](game\_interface.md#game-reload)
 
 {% hint style="success" %}
-Parameters in square brackets "\[parameter\]" are optional
+Parameters in square brackets "\[parameter]" are optional
 
 and their default value is specified after the name e.g "= false"
 {% endhint %}
 
-### Game.getSpectators\(\)
+### Game.getSpectators()
 
-position\[, multifloor = false\[, onlyPlayer = false\[, minRangeX = 0\[, maxRangeX = 0\[, minRangeY = 0\[, maxRangeY = 0\]\]\]\]\]\]
+position\[, multifloor = false\[, onlyPlayer = false\[, minRangeX = 0\[, maxRangeX = 0\[, minRangeY = 0\[, maxRangeY = 0]]]]]]
 
 {% hint style="danger" %}
-This method is pretty heavy \(excessive usage might be affecting performance\)
+This method is pretty heavy (excessive usage might be affecting performance)
 {% endhint %}
 
 ```lua
@@ -44,12 +44,12 @@ local position = Position(1000, 1000, 7)
 local spectators = Game.getSpectators(position, false, true, 10, 10, 10, 10)
 -- get all spectators from position in radius of 10 vertically and horizontally
 for _, spectator in ipairs(spectators) do
-    -- iterates over all spectators and prints their type (npc, monster or player)
-    print(type(spectator))
+    -- iterates over all spectators and prints their type
+    print(type(spectator)) -- prints userdata
 end
 ```
 
-### Game.getPlayers\(\)
+### Game.getPlayers()
 
 ```lua
 local players = Game.getPlayers()
@@ -60,7 +60,7 @@ for _, player in ipairs(players) do
 end
 ```
 
-### Game.loadMap\(\)
+### Game.loadMap()
 
 path
 
@@ -68,7 +68,7 @@ path
 Game.loadMap("/data/world/map.otbm")
 ```
 
-### Game.getExperienceStage\(\)
+### Game.getExperienceStage()
 
 level
 
@@ -77,28 +77,28 @@ local experienceStage = Game.getExperienceStages(100)
 print(experienceStage) -- prints current experience stage for level 100
 ```
 
-### Game.getMonstersCount\(\)
+### Game.getMonstersCount()
 
 ```lua
 local monstersCount = Game.getMonstersCount()
 print(monstersCount) -- prints number of alive monsters
 ```
 
-### Game.getPlayersCount\(\)
+### Game.getPlayersCount()
 
 ```lua
 local playersCount = Game.getPlayersCount()
 print(playersCount) -- prints number of players online
 ```
 
-### Game.getNpcCount\(\)
+### Game.getNpcCount()
 
 ```lua
 local npcCount = Game.getNpcCount()
 print(npcCount) -- prints number of npcs
 ```
 
-### Game.getMonsterTypes\(\)
+### Game.getMonsterTypes()
 
 ```lua
 local monsterTypes = Game.getMonsterTypes()
@@ -108,7 +108,7 @@ for _, monsterType in ipairs(monsterTypes) do
 end
 ```
 
-### Game.getTowns\(\)
+### Game.getTowns()
 
 ```lua
 local towns = Game.getTowns()
@@ -118,7 +118,7 @@ for _, townin ipairs(towns) do
 end
 ```
 
-### Game.getHouses\(\)
+### Game.getHouses()
 
 ```lua
 local houses = Game.getHouses()
@@ -128,7 +128,7 @@ for _, house in ipairs(houses) do
 end
 ```
 
-### Game.getGameState\(\)
+### Game.getGameState()
 
 ```lua
 local gameState = Game.getGameState()
@@ -138,7 +138,7 @@ if gameState == GAME_STATE_CLOSED then
 end
 ```
 
-### Game.setGameState\(\)
+### Game.setGameState()
 
 state
 
@@ -146,14 +146,14 @@ state
 Game.setGameState(GAME_STATE_NORMAL) -- sets game state to state normal
 ```
 
-### Game.getWorldType\(\)
+### Game.getWorldType()
 
 ```lua
 local worldType = Game.getWorldType()
 print(worldType) -- prints currently set world type ex. WORLD_TYPE_PVP
 ```
 
-### Game.setWorldType\(\)
+### Game.setWorldType()
 
 worldType
 
@@ -161,7 +161,7 @@ worldType
 Game.setWorldType(WORLD_TYPE_NO_PVP) -- sets current world type to non pvp
 ```
 
-### Game.getReturnMessage\(\)
+### Game.getReturnMessage()
 
 returnValue
 
@@ -174,9 +174,9 @@ if player then
 end
 ```
 
-### Game.createItem\(\)
+### Game.createItem()
 
-itemId\[, count\[, position\]\]
+itemId\[, count\[, position]]
 
 ```lua
 local item = Game.createItem(2160)
@@ -191,9 +191,9 @@ item = Game.createItem(2160, 1, Position(1001, 1000, 7)
 print(item:getPosition().x) -- prints 1001
 ```
 
-### Game.createContainer\(\)
+### Game.createContainer()
 
-itemId, size\[, position\]
+itemId, size\[, position]
 
 ```lua
 local container = Game.createContainer(1987, 10)
@@ -208,9 +208,9 @@ container = Game.createContainer(2160, 10, Position(1001, 1000, 7)
 print(container:getPosition().x) -- prints 1001
 ```
 
-### Game.createMonster\(\)
+### Game.createMonster()
 
-monsterName, position\[, extended = false\[, force = false\]\]
+monsterName, position\[, extended = false\[, force = false]]
 
 {% hint style="info" %}
 **extended** means monster can be spawned in area near the specified position
@@ -225,9 +225,9 @@ if monster then
 end
 ```
 
-### Game.createNpc\(\)
+### Game.createNpc()
 
-npcName, position\[, extended = false\[, force = false\]\]
+npcName, position\[, extended = false\[, force = false]]
 
 ```lua
 local npc = Game.createNpc("Nekiro", Position(1000, 1000, 7), false, true)
@@ -236,14 +236,14 @@ if npc then
 end
 ```
 
-### Game.createTile\(\)
+### Game.createTile()
 
-x, y, z\[, isDynamic = false\]
+x, y, z\[, isDynamic = false]
 
-position\[, isDynamic = false\]
+position\[, isDynamic = false]
 
 {% hint style="info" %}
-Dynamic tiles can store items and creatures, in most cases **walkable** one. \(They take more memory too\)
+Dynamic tiles can store items and creatures, in most cases **walkable** one. (They take more memory too)
 {% endhint %}
 
 ```lua
@@ -254,7 +254,7 @@ if tile then
 end
 ```
 
-### Game.createMonsterType\(\)
+### Game.createMonsterType()
 
 name
 
@@ -270,7 +270,7 @@ if newMonsterType then
 end
 ```
 
-### Game.startRaid\(\)
+### Game.startRaid()
 
 raidName
 
@@ -282,7 +282,7 @@ This method might get soon deprecated in favor of raid system written in Lua
 Game.startRaid("RatsThais") -- starts raid with name RatsThais
 ```
 
-### Game.getClientVersion\(\)
+### Game.getClientVersion()
 
 ```lua
 local clientVersion = Game.getClientVersion()
@@ -292,7 +292,7 @@ print(clientVersion) -- prints table: 0x93ff90
 print(clientVersion.min, clientVersion.max, clientVersion.string)
 ```
 
-### Game.reload\(\)
+### Game.reload()
 
 reloadType
 
@@ -301,4 +301,3 @@ Game.reload(RELOAD_TYPE_GLOBAL) -- reloads all libs
 Game.reload(RELOAD_TYPE_ACTIONS) -- reloads all actions
 -- and so on...
 ```
-
