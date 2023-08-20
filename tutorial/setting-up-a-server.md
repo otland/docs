@@ -66,3 +66,11 @@ You should now be able to connect to your website by typing to 127.0.0.1 or loca
 
 You should now be able to connect to your website by typing \(127.0.0.1, localhost or the IP\) in your address bar on your browser.
 
+#### Website alternative \(MyAAC\)
+
+1. Download MyAAC from GitHub: [https://github.com/slawkens/myaac/releases/latest](https://github.com/slawkens/myaac/releases/latest). At the moment of writing, the latest available stable version is v0.8.12
+2. Extract the .zip file to your web directory \(Example: C:\UniServ\www \) Without modifying config.php, enter the website and follow the installation, during the installation MyAAC will install the database schema needed.
+3. When visiting the page for the first time, you may see a prompt about unknown IP. Copy the IP Address showed and paste it into install/ip.txt.
+
+If errors happens - you can visit official [MyAAC Docs](https://docs.my-aac.org/troubleshooting) - to try to get more informations.  
+If you find issues, you can use [OtLand Support Forums](https://otland.net/forums/support.16/)
